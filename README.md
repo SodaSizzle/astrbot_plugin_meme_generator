@@ -12,7 +12,11 @@ _✨ 高性能智能表情包生成器 - 让聊天更有趣 ✨_
 ![AstrBot](https://img.shields.io/badge/AstrBot-Plugin-purple?style=for-the-badge)
 
 </div>
+## 📢 有问题可加入群聊
 
+- q群：**771954725**
+
+👉 [点击加入群聊](https://qun.qq.com/universal-share/share?ac=1&authKey=f6x7Z5%2FzsUwmoctYcMvLhdGw513QR2%2BFyIB8tJKMx50pEoGJRg3xsL8gf%2Bje9CgE&busi_data=eyJncm91cENvZGUiOiI3NzE5NTQ3MjUiLCJ0b2tlbiI6IlQwcWphdG5WL3pJZnpiVGxYaS9tRk13d2VWNW1JR3B0NnZoR1lnT3pkWTBMVTZUcXJybTM5QkVwZzFzSnlzTmoiLCJ1aW4iOiIxNTEyMDA0MjA1In0%3D&data=Us_H9b5JmURoPJSRIXD48XgD0oL5-HQjpcJQsXJ6zAIM_ujDXwWeNCstUSUDJkqbsDABFq4zmLn55KLlF_GsOw&svctype=4&tempid=h5_group_info)
 ## 🚀 项目简介
 
 这是一个专为 **AstrBot** 打造的 **智能表情包生成插件**，基于 [meme-generator-rs](https://github.com/MemeCrafters/meme-generator-rs) 与 [nonebot-plugin-memes](https://github.com/MemeCrafters/nonebot-plugin-memes) 开发。插件融合了高效的图像处理与模板匹配技术，能够为用户带来多样化、灵活而有趣的表情包创作体验。
