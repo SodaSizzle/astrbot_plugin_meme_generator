@@ -1,0 +1,30 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# 运行时数据 / 缓存
+/data/
+cache/
+*.log
+logs/
+
+# 虚拟环境 / 打包产物
+.venv/
+venv/
+.env
+*.egg-info/
+build/
+dist/
+
+# IDE / 编辑器
+.idea/
+.vscode/
+.claude/
+docs/**
+*.swp
+*.swo
+
+# 系统
+.DS_Store
+Thumbs.db
