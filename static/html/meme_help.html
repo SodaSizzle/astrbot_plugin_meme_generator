@@ -7,54 +7,86 @@
     <link rel="stylesheet" href="../css/meme_help.css">
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>🎭 Meme 表情包插件</h1>
-            <div class="subtitle">高性能表情包生成器 - 让聊天更有趣！</div>
-            <div class="created-by">🌟 astrbot_plugin_meme_generator {{ version }} by {{ author }}</div>
-        </div>
-
-        <div class="content">
-            <div class="section">
-                <h2 class="section-title">📋 基础命令</h2>
-                <div class="command-grid">
-                    {% for cmd in basic_commands %}
-                    <div class="command-card">
-                        <div class="command-name">
-                            <span class="emoji">{{ cmd.emoji }}</span>{{ cmd.name }}
-                        </div>
-                        <div class="command-desc">{{ cmd.desc }}</div>
+    <div class="page-shell">
+        <div class="container">
+            <div class="header">
+                <div class="eyebrow">Command Center</div>
+                <h1>Meme 表情菜单</h1>
+                <div class="subtitle">清晰查看命令、快速生成表情、轻松管理插件状态。</div>
+                <div class="created-by">astrbot_plugin_meme_generator {{ version }} · by {{ author }}</div>
+                <div class="header-stats">
+                    <div class="stat-pill">
+                        <span class="stat-value">{{ basic_commands|length }}</span>
+                        <span class="stat-label">基础命令</span>
                     </div>
-                    {% endfor %}
+                    {% if admin_commands %}
+                    <div class="stat-pill">
+                        <span class="stat-value">{{ admin_commands|length }}</span>
+                        <span class="stat-label">管理命令</span>
+                    </div>
+                    {% endif %}
+                    <div class="stat-pill">
+                        <span class="stat-value">3</span>
+                        <span class="stat-label">常用方式</span>
+                    </div>
                 </div>
             </div>
 
-            <div class="section admin-section">
-                <h2 class="section-title">🔧 管理员命令</h2>
-                <div class="command-grid">
-                    {% for cmd in admin_commands %}
-                    <div class="command-card">
-                        <div class="command-name">
-                            <span class="emoji">{{ cmd.emoji }}</span>{{ cmd.name }}
-                        </div>
-                        <div class="command-desc">{{ cmd.desc }}</div>
+            <div class="content">
+                <div class="section">
+                    <div class="section-heading">
+                        <h2 class="section-title">基础命令</h2>
+                        <div class="section-note">面向所有用户的常用入口</div>
                     </div>
-                    {% endfor %}
+                    <div class="command-grid">
+                        {% for cmd in basic_commands %}
+                        <div class="command-card">
+                            <div class="command-meta">
+                                <span class="command-index">0{{ loop.index }}</span>
+                                <span class="command-kind">基础</span>
+                            </div>
+                            <div class="command-name">{{ cmd.name }}</div>
+                            <div class="command-desc">{{ cmd.desc }}</div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                {% if admin_commands %}
+                <div class="section admin-section">
+                    <div class="section-heading">
+                        <h2 class="section-title">管理员命令</h2>
+                        <div class="section-note">用于开关、限制与状态检查</div>
+                    </div>
+                    <div class="command-grid">
+                        {% for cmd in admin_commands %}
+                        <div class="command-card">
+                            <div class="command-meta">
+                                <span class="command-index">0{{ loop.index }}</span>
+                                <span class="command-kind">管理</span>
+                            </div>
+                            <div class="command-name">{{ cmd.name }}</div>
+                            <div class="command-desc">{{ cmd.desc }}</div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+
+                <div class="usage-tips">
+                    <div class="tips-header">
+                        <h3>使用建议</h3>
+                        <div class="tips-note">上手最快的三种使用路径</div>
+                    </div>
+                    <ul>
+                        <li>直接发送表情包关键词即可生成，例如“加载中”或“挠头”。</li>
+                        <li>支持 @用户 自动获取头像，也可以上传图片作为输入。</li>
+                        <li>引用他人消息时，可直接沿用对方头像与昵称信息。</li>
+                        <li>命令前缀默认为 `/`，也可以直接 @机器人 使用。</li>
+                    </ul>
                 </div>
             </div>
-
-            <div class="usage-tips">
-                <h3>💡 使用小贴士</h3>
-                <ul>
-                    <li>直接发送表情包关键词即可生成，如："加载中"、"挠头"</li>
-                    <li>支持@用户自动获取头像，也可以上传图片</li>
-                    <li>可以引用他人消息来使用其头像和昵称</li>
-                    <li>命令前缀默认为/，也可直接@</li>
-                </ul>
-            </div>
         </div>
-
-
     </div>
 </body>
 </html>

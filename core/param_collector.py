@@ -6,7 +6,7 @@ from meme_generator import Meme
 from meme_generator import Image as MemeImage
 from astrbot.core.platform import AstrMessageEvent
 import astrbot.core.message.components as Comp
-from ..utils import PlatformUtils
+from ..utils.platform_utils import PlatformUtils
 
 
 class ParamCollector:
@@ -86,6 +86,79 @@ class ParamCollector:
         # 智能补全文本参数（使用昵称和默认文本）
         self._auto_fill_texts(texts, target_names, default_texts, min_texts, max_texts)
 
+        return meme_images, texts, options
+
+    async def collect_auto_params(
+            self,
+            event: AstrMessageEvent,
+            meme: Meme,
+            text_candidates: List[str] | None = None
+    ) -> Tuple[List[MemeImage], List[str], Dict[str, Union[bool, str, int, float]]]:
+        """Collect parameters for auto meme rendering without keyword parsing."""
+        meme_images: List[MemeImage] = []
+        texts: List[str] = []
+        options: Dict[str, Union[bool, str, int, float]] = {}
+
+        params = meme.info.params
+        max_images: int = params.max_images
+        min_texts: int = params.min_texts
+        max_texts: int = params.max_texts
+        default_texts: List[str] = params.default_texts
+
+        messages = event.get_messages()
+        send_id: str = event.get_sender_id()
+        self_id: str = event.get_self_id()
+        sender_name: str = str(event.get_sender_name())
+
+        target_ids: List[str] = []
+        target_names: List[str] = []
+
+        async def _process_segment(_seg, name):
+            if isinstance(_seg, Comp.Image):
+                await self._process_image_segment(_seg, name, meme_images)
+            elif isinstance(_seg, Comp.At):
+                await self._process_at_segment(
+                    _seg,
+                    event,
+                    self_id,
+                    target_ids,
+                    target_names,
+                    options,
+                    meme_images,
+                )
+
+        reply_seg = next((seg for seg in messages if isinstance(seg, Comp.Reply)), None)
+        if reply_seg and reply_seg.chain:
+            for seg in reply_seg.chain:
+                await _process_segment(seg, "引用用户")
+
+        for seg in messages:
+            await _process_segment(seg, sender_name)
+
+        if not target_ids:
+            if result := await PlatformUtils.get_user_extra_info(event, send_id):
+                nickname, sex = result
+                options["name"], options["gender"] = nickname, sex
+                target_names.append(nickname)
+
+        if not target_names:
+            target_names.append(sender_name)
+
+        await self._auto_fill_images(
+            event,
+            send_id,
+            self_id,
+            sender_name,
+            meme_images,
+            max_images,
+        )
+
+        for candidate in text_candidates or []:
+            candidate = (candidate or "").strip()
+            if candidate:
+                texts.append(candidate)
+
+        self._auto_fill_texts(texts, target_names, default_texts, min_texts, max_texts)
         return meme_images, texts, options
 
     async def _process_image_segment(self, seg: Comp.Image, name: str, meme_images: List[MemeImage]):

@@ -1,0 +1,5840 @@
+{
+  "5000choyen": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "5000choyen",
+    "notes": "aliases: 5000兆",
+    "aliases": [
+      "5000兆"
+    ]
+  },
+  "abstinence": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "abstinence",
+    "notes": "aliases: 戒导",
+    "aliases": [
+      "戒导"
+    ]
+  },
+  "ace_attorney_dialog": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "ace_attorney_dialog",
+    "notes": "aliases: 逆转裁判气泡",
+    "aliases": [
+      "逆转裁判气泡"
+    ]
+  },
+  "acg_entrance": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "acg_entrance",
+    "notes": "aliases: 二次元入口",
+    "aliases": [
+      "二次元入口"
+    ]
+  },
+  "add_chaos": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "add_chaos",
+    "notes": "aliases: 添乱|给社会添乱",
+    "aliases": [
+      "添乱",
+      "给社会添乱"
+    ]
+  },
+  "addiction": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "addiction",
+    "notes": "aliases: 上瘾|毒瘾发作",
+    "aliases": [
+      "上瘾",
+      "毒瘾发作"
+    ]
+  },
+  "alike": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "alike",
+    "notes": "aliases: 一样",
+    "aliases": [
+      "一样"
+    ]
+  },
+  "alipay": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "alipay",
+    "notes": "aliases: 支付宝支付",
+    "aliases": [
+      "支付宝支付"
+    ]
+  },
+  "always": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "always",
+    "notes": "aliases: 一直",
+    "aliases": [
+      "一直"
+    ]
+  },
+  "always_like": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "always_like",
+    "notes": "aliases: 我永远喜欢",
+    "aliases": [
+      "我永远喜欢"
+    ]
+  },
+  "anan_say": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "anan_say",
+    "notes": "aliases: 安安说",
+    "aliases": [
+      "安安说"
+    ]
+  },
+  "anti_kidnap": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "anti_kidnap",
+    "notes": "aliases: 防诱拐",
+    "aliases": [
+      "防诱拐"
+    ]
+  },
+  "anya_suki": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "anya_suki",
+    "notes": "aliases: 阿尼亚喜欢",
+    "aliases": [
+      "阿尼亚喜欢"
+    ]
+  },
+  "applaud": {
+    "emotion_tags": [
+      "调侃",
+      "鼓励",
+      "认可"
+    ],
+    "scene_tags": [
+      "聊天",
+      "鼓励"
+    ],
+    "style_tags": [
+      "通用",
+      "正向"
+    ],
+    "risk_level": "low",
+    "auto_weight": 0.34,
+    "enabled_for_auto": true,
+    "cooldown_group": "applaud",
+    "notes": "aliases: 鼓掌",
+    "aliases": [
+      "鼓掌"
+    ]
+  },
+  "arona_throw": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "arona_throw",
+    "notes": "aliases: 阿罗娜扔",
+    "aliases": [
+      "阿罗娜扔"
+    ]
+  },
+  "ascension": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "ascension",
+    "notes": "aliases: 升天",
+    "aliases": [
+      "升天"
+    ]
+  },
+  "ask": {
+    "emotion_tags": [
+      "调侃",
+      "疑惑"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用",
+      "疑问"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.24,
+    "enabled_for_auto": true,
+    "cooldown_group": "ask",
+    "notes": "aliases: 问问",
+    "aliases": [
+      "问问"
+    ]
+  },
+  "atri_pillow": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "atri_pillow",
+    "notes": "aliases: 亚托莉枕头",
+    "aliases": [
+      "亚托莉枕头"
+    ]
+  },
+  "ayachi_holdsign": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "ayachi_holdsign",
+    "notes": "aliases: 宁宁举牌",
+    "aliases": [
+      "宁宁举牌"
+    ]
+  },
+  "ba_say": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "ba_say",
+    "notes": "aliases: ba说",
+    "aliases": [
+      "ba说"
+    ]
+  },
+  "back_to_work": {
+    "emotion_tags": [
+      "调侃",
+      "鼓励",
+      "认可"
+    ],
+    "scene_tags": [
+      "聊天",
+      "鼓励"
+    ],
+    "style_tags": [
+      "通用",
+      "正向"
+    ],
+    "risk_level": "high",
+    "auto_weight": 0.18,
+    "enabled_for_auto": true,
+    "cooldown_group": "back_to_work",
+    "notes": "aliases: 继续干活|打工人",
+    "aliases": [
+      "继续干活",
+      "打工人"
+    ]
+  },
+  "backflip": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "backflip",
+    "notes": "aliases: 后空翻",
+    "aliases": [
+      "后空翻"
+    ]
+  },
+  "bad_news": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "bad_news",
+    "notes": "aliases: 悲报",
+    "aliases": [
+      "悲报"
+    ]
+  },
+  "batitle": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "batitle",
+    "notes": "aliases: 蔚蓝档案标题|batitle",
+    "aliases": [
+      "蔚蓝档案标题",
+      "batitle"
+    ]
+  },
+  "beat_head": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "beat_head",
+    "notes": "aliases: 拍头",
+    "aliases": [
+      "拍头"
+    ]
+  },
+  "beat_up": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "high",
+    "auto_weight": 0.18,
+    "enabled_for_auto": true,
+    "cooldown_group": "beat_up",
+    "notes": "aliases: 揍",
+    "aliases": [
+      "揍"
+    ]
+  },
+  "blamed_mahiro": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "high",
+    "auto_weight": 0.18,
+    "enabled_for_auto": true,
+    "cooldown_group": "blamed_mahiro",
+    "notes": "aliases: 真寻挨骂",
+    "aliases": [
+      "真寻挨骂"
+    ]
+  },
+  "blood_pressure": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "blood_pressure",
+    "notes": "aliases: 高血压",
+    "aliases": [
+      "高血压"
+    ]
+  },
+  "bocchi_draft": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "bocchi_draft",
+    "notes": "aliases: 波奇手稿",
+    "aliases": [
+      "波奇手稿"
+    ]
+  },
+  "bronya_holdsign": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "bronya_holdsign",
+    "notes": "aliases: 布洛妮娅举牌|大鸭鸭举牌",
+    "aliases": [
+      "布洛妮娅举牌",
+      "大鸭鸭举牌"
+    ]
+  },
+  "bubble_tea": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "bubble_tea",
+    "notes": "aliases: 奶茶",
+    "aliases": [
+      "奶茶"
+    ]
+  },
+  "call_110": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "high",
+    "auto_weight": 0.18,
+    "enabled_for_auto": true,
+    "cooldown_group": "call_110",
+    "notes": "aliases: 遇到困难请拨打",
+    "aliases": [
+      "遇到困难请拨打"
+    ]
+  },
+  "capoo_draw": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "capoo_draw",
+    "notes": "aliases: 咖波画",
+    "aliases": [
+      "咖波画"
+    ]
+  },
+  "capoo_point": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "capoo_point",
+    "notes": "aliases: 咖波指",
+    "aliases": [
+      "咖波指"
+    ]
+  },
+  "capoo_rip": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "capoo_rip",
+    "notes": "aliases: 咖波撕",
+    "aliases": [
+      "咖波撕"
+    ]
+  },
+  "capoo_rub": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "capoo_rub",
+    "notes": "aliases: 咖波蹭|咖波贴",
+    "aliases": [
+      "咖波蹭",
+      "咖波贴"
+    ]
+  },
+  "capoo_say": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "capoo_say",
+    "notes": "aliases: 咖波说",
+    "aliases": [
+      "咖波说"
+    ]
+  },
+  "capoo_stew": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "capoo_stew",
+    "notes": "aliases: 咖波炖",
+    "aliases": [
+      "咖波炖"
+    ]
+  },
+  "capoo_strike": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "capoo_strike",
+    "notes": "aliases: 咖波撞|咖波头槌",
+    "aliases": [
+      "咖波撞",
+      "咖波头槌"
+    ]
+  },
+  "captain": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "captain",
+    "notes": "aliases: 舰长",
+    "aliases": [
+      "舰长"
+    ]
+  },
+  "caused_by_this": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "caused_by_this",
+    "notes": "aliases: 这个引起的",
+    "aliases": [
+      "这个引起的"
+    ]
+  },
+  "certificate": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "certificate",
+    "notes": "aliases: 奖状|证书",
+    "aliases": [
+      "奖状",
+      "证书"
+    ]
+  },
+  "chanshenzi": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "chanshenzi",
+    "notes": "aliases: 馋身子",
+    "aliases": [
+      "馋身子"
+    ]
+  },
+  "charpic": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "charpic",
+    "notes": "aliases: 字符画",
+    "aliases": [
+      "字符画"
+    ]
+  },
+  "chase_train": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "chase_train",
+    "notes": "aliases: 追列车|追火车",
+    "aliases": [
+      "追列车",
+      "追火车"
+    ]
+  },
+  "china_flag": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "china_flag",
+    "notes": "aliases: 国旗",
+    "aliases": [
+      "国旗"
+    ]
+  },
+  "chino_throw": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "chino_throw",
+    "notes": "aliases: 智乃扔|智乃抛",
+    "aliases": [
+      "智乃扔",
+      "智乃抛"
+    ]
+  },
+  "clauvio_twist": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "clauvio_twist",
+    "notes": "aliases: 鼠鼠搓",
+    "aliases": [
+      "鼠鼠搓"
+    ]
+  },
+  "clown": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "clown",
+    "notes": "aliases: 小丑",
+    "aliases": [
+      "小丑"
+    ]
+  },
+  "clown_mask": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "clown_mask",
+    "notes": "aliases: 小丑面具",
+    "aliases": [
+      "小丑面具"
+    ]
+  },
+  "confuse": {
+    "emotion_tags": [
+      "调侃",
+      "疑惑"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用",
+      "疑问"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.24,
+    "enabled_for_auto": true,
+    "cooldown_group": "confuse",
+    "notes": "aliases: 迷惑",
+    "aliases": [
+      "迷惑"
+    ]
+  },
+  "coupon": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "coupon",
+    "notes": "aliases: 兑换券",
+    "aliases": [
+      "兑换券"
+    ]
+  },
+  "cover_face": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "cover_face",
+    "notes": "aliases: 捂脸",
+    "aliases": [
+      "捂脸"
+    ]
+  },
+  "crawl": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "crawl",
+    "notes": "aliases: 爬",
+    "aliases": [
+      "爬"
+    ]
+  },
+  "cyan": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "cyan",
+    "notes": "aliases: 群青",
+    "aliases": [
+      "群青"
+    ]
+  },
+  "daynight": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "daynight",
+    "notes": "aliases: 白天黑夜|白天晚上",
+    "aliases": [
+      "白天黑夜",
+      "白天晚上"
+    ]
+  },
+  "decent_kiss": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "decent_kiss",
+    "notes": "aliases: 像样的亲亲",
+    "aliases": [
+      "像样的亲亲"
+    ]
+  },
+  "dianzhongdian": {
+    "emotion_tags": [
+      "调侃",
+      "吐槽",
+      "无语"
+    ],
+    "scene_tags": [
+      "聊天",
+      "调侃"
+    ],
+    "style_tags": [
+      "通用",
+      "整活"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.28,
+    "enabled_for_auto": true,
+    "cooldown_group": "dianzhongdian",
+    "notes": "aliases: 入典|典中典|黑白草图",
+    "aliases": [
+      "入典",
+      "典中典",
+      "黑白草图"
+    ]
+  },
+  "dinosaur": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "dinosaur",
+    "notes": "aliases: 恐龙|小恐龙",
+    "aliases": [
+      "恐龙",
+      "小恐龙"
+    ]
+  },
+  "distracted": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "distracted",
+    "notes": "aliases: 注意力涣散",
+    "aliases": [
+      "注意力涣散"
+    ]
+  },
+  "divorce": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "divorce",
+    "notes": "aliases: 离婚协议|离婚申请",
+    "aliases": [
+      "离婚协议",
+      "离婚申请"
+    ]
+  },
+  "dog_dislike": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "dog_dislike",
+    "notes": "aliases: 狗都不玩",
+    "aliases": [
+      "狗都不玩"
+    ]
+  },
+  "dog_of_vtb": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "dog_of_vtb",
+    "notes": "aliases: 管人痴",
+    "aliases": [
+      "管人痴"
+    ]
+  },
+  "dont_go_near": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "dont_go_near",
+    "notes": "aliases: 不要靠近",
+    "aliases": [
+      "不要靠近"
+    ]
+  },
+  "dont_press": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "dont_press",
+    "notes": "aliases: 不要按",
+    "aliases": [
+      "不要按"
+    ]
+  },
+  "dont_touch": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "dont_touch",
+    "notes": "aliases: 别碰",
+    "aliases": [
+      "别碰"
+    ]
+  },
+  "doraemon_say": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "doraemon_say",
+    "notes": "aliases: 哆啦A梦说",
+    "aliases": [
+      "哆啦A梦说"
+    ]
+  },
+  "douyin": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "douyin",
+    "notes": "aliases: douyin",
+    "aliases": [
+      "douyin"
+    ]
+  },
+  "eat": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "eat",
+    "notes": "aliases: 吃",
+    "aliases": [
+      "吃"
+    ]
+  },
+  "elysia_holdsign": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "elysia_holdsign",
+    "notes": "aliases: 爱莉举牌",
+    "aliases": [
+      "爱莉举牌"
+    ]
+  },
+  "emperor_dragon": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "emperor_dragon",
+    "notes": "aliases: 皇帝龙图",
+    "aliases": [
+      "皇帝龙图"
+    ]
+  },
+  "erised_mirror": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "erised_mirror",
+    "notes": "aliases: 意若思镜",
+    "aliases": [
+      "意若思镜"
+    ]
+  },
+  "fade_away": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "fade_away",
+    "notes": "aliases: 灰飞烟灭",
+    "aliases": [
+      "灰飞烟灭"
+    ]
+  },
+  "fanatic": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "fanatic",
+    "notes": "aliases: 狂爱|狂粉",
+    "aliases": [
+      "狂爱",
+      "狂粉"
+    ]
+  },
+  "father_work": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "father_work",
+    "notes": "aliases: 我爸爸",
+    "aliases": [
+      "我爸爸"
+    ]
+  },
+  "fencing": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "fencing",
+    "notes": "aliases: 击剑|🤺",
+    "aliases": [
+      "击剑",
+      "🤺"
+    ]
+  },
+  "fight_with_sunuo": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "high",
+    "auto_weight": 0.18,
+    "enabled_for_auto": true,
+    "cooldown_group": "fight_with_sunuo",
+    "notes": "aliases: 我打宿傩|我打宿傩吗",
+    "aliases": [
+      "我打宿傩",
+      "我打宿傩吗"
+    ]
+  },
+  "fill_head": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "fill_head",
+    "notes": "aliases: 满脑子",
+    "aliases": [
+      "满脑子"
+    ]
+  },
+  "find_chips": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "find_chips",
+    "notes": "aliases: 整点薯条",
+    "aliases": [
+      "整点薯条"
+    ]
+  },
+  "firefly_holdsign": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "firefly_holdsign",
+    "notes": "aliases: 流萤举牌",
+    "aliases": [
+      "流萤举牌"
+    ]
+  },
+  "flash_blind": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "flash_blind",
+    "notes": "aliases: 闪瞎",
+    "aliases": [
+      "闪瞎"
+    ]
+  },
+  "flick": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "flick",
+    "notes": "aliases: 弹|脑瓜崩",
+    "aliases": [
+      "弹",
+      "脑瓜崩"
+    ]
+  },
+  "flush": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "flush",
+    "notes": "aliases: 红温",
+    "aliases": [
+      "红温"
+    ]
+  },
+  "fogging": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "fogging",
+    "notes": "aliases: 回南天|水雾",
+    "aliases": [
+      "回南天",
+      "水雾"
+    ]
+  },
+  "follow": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "follow",
+    "notes": "aliases: 关注",
+    "aliases": [
+      "关注"
+    ]
+  },
+  "forbid": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "forbid",
+    "notes": "aliases: 禁止|禁",
+    "aliases": [
+      "禁止",
+      "禁"
+    ]
+  },
+  "frieren_take": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "frieren_take",
+    "notes": "aliases: 芙莉莲拿",
+    "aliases": [
+      "芙莉莲拿"
+    ]
+  },
+  "funny_mirror": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "funny_mirror",
+    "notes": "aliases: 哈哈镜",
+    "aliases": [
+      "哈哈镜"
+    ]
+  },
+  "garbage": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "garbage",
+    "notes": "aliases: 垃圾|垃圾桶",
+    "aliases": [
+      "垃圾",
+      "垃圾桶"
+    ]
+  },
+  "genshin_eat": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "genshin_eat",
+    "notes": "aliases: 原神吃",
+    "aliases": [
+      "原神吃"
+    ]
+  },
+  "genshin_start": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "genshin_start",
+    "notes": "aliases: 原神启动",
+    "aliases": [
+      "原神启动"
+    ]
+  },
+  "good_news": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "good_news",
+    "notes": "aliases: 喜报",
+    "aliases": [
+      "喜报"
+    ]
+  },
+  "google": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "google",
+    "notes": "aliases: google",
+    "aliases": [
+      "google"
+    ]
+  },
+  "google_captcha": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "google_captcha",
+    "notes": "aliases: 谷歌验证码",
+    "aliases": [
+      "谷歌验证码"
+    ]
+  },
+  "gorilla_throw": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "gorilla_throw",
+    "notes": "aliases: 猩猩扔",
+    "aliases": [
+      "猩猩扔"
+    ]
+  },
+  "grab": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "grab",
+    "notes": "aliases: 抓",
+    "aliases": [
+      "抓"
+    ]
+  },
+  "grab_both_hands": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "grab_both_hands",
+    "notes": "aliases: 双手抓",
+    "aliases": [
+      "双手抓"
+    ]
+  },
+  "guichu": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "guichu",
+    "notes": "aliases: 鬼畜",
+    "aliases": [
+      "鬼畜"
+    ]
+  },
+  "gun": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "high",
+    "auto_weight": 0.18,
+    "enabled_for_auto": true,
+    "cooldown_group": "gun",
+    "notes": "aliases: 手枪",
+    "aliases": [
+      "手枪"
+    ]
+  },
+  "hammer": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "hammer",
+    "notes": "aliases: 锤",
+    "aliases": [
+      "锤"
+    ]
+  },
+  "haruhi_raise": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "haruhi_raise",
+    "notes": "aliases: 凉宫春日举",
+    "aliases": [
+      "凉宫春日举"
+    ]
+  },
+  "head_butt": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "head_butt",
+    "notes": "aliases: 顶",
+    "aliases": [
+      "顶"
+    ]
+  },
+  "high_eq": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "high_eq",
+    "notes": "aliases: 高低情商|低高情商",
+    "aliases": [
+      "高低情商",
+      "低高情商"
+    ]
+  },
+  "hit_screen": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "high",
+    "auto_weight": 0.18,
+    "enabled_for_auto": true,
+    "cooldown_group": "hit_screen",
+    "notes": "aliases: 打穿|打穿屏幕",
+    "aliases": [
+      "打穿",
+      "打穿屏幕"
+    ]
+  },
+  "hold_grudge": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "hold_grudge",
+    "notes": "aliases: 记仇",
+    "aliases": [
+      "记仇"
+    ]
+  },
+  "hold_tight": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "hold_tight",
+    "notes": "aliases: 抱紧",
+    "aliases": [
+      "抱紧"
+    ]
+  },
+  "hug": {
+    "emotion_tags": [
+      "调侃",
+      "安慰",
+      "鼓励",
+      "认可"
+    ],
+    "scene_tags": [
+      "聊天",
+      "安抚",
+      "鼓励"
+    ],
+    "style_tags": [
+      "通用",
+      "安抚",
+      "正向"
+    ],
+    "risk_level": "low",
+    "auto_weight": 0.34,
+    "enabled_for_auto": true,
+    "cooldown_group": "hug",
+    "notes": "aliases: 抱|抱抱",
+    "aliases": [
+      "抱",
+      "抱抱"
+    ]
+  },
+  "hug_leg": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "hug_leg",
+    "notes": "aliases: 抱大腿",
+    "aliases": [
+      "抱大腿"
+    ]
+  },
+  "hutao_bite": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "hutao_bite",
+    "notes": "aliases: 胡桃啃",
+    "aliases": [
+      "胡桃啃"
+    ]
+  },
+  "imprison": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "imprison",
+    "notes": "aliases: 坐牢",
+    "aliases": [
+      "坐牢"
+    ]
+  },
+  "incivilization": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "incivilization",
+    "notes": "aliases: 不文明",
+    "aliases": [
+      "不文明"
+    ]
+  },
+  "intel_inside": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "intel_inside",
+    "notes": "aliases: inside",
+    "aliases": [
+      "inside"
+    ]
+  },
+  "interview": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "interview",
+    "notes": "aliases: 采访",
+    "aliases": [
+      "采访"
+    ]
+  },
+  "jerry_stare": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "jerry_stare",
+    "notes": "aliases: 杰瑞盯",
+    "aliases": [
+      "杰瑞盯"
+    ]
+  },
+  "jiamianqishi": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "jiamianqishi",
+    "notes": "aliases: 假面骑士",
+    "aliases": [
+      "假面骑士"
+    ]
+  },
+  "jiji_king": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "jiji_king",
+    "notes": "aliases: 急急国王",
+    "aliases": [
+      "急急国王"
+    ]
+  },
+  "jinhsi": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "jinhsi",
+    "notes": "aliases: 汐汐|今汐",
+    "aliases": [
+      "汐汐",
+      "今汐"
+    ]
+  },
+  "jiubingfufa": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "jiubingfufa",
+    "notes": "aliases: 旧病复发",
+    "aliases": [
+      "旧病复发"
+    ]
+  },
+  "jiujiu": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "jiujiu",
+    "notes": "aliases: 啾啾",
+    "aliases": [
+      "啾啾"
+    ]
+  },
+  "jump": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "jump",
+    "notes": "aliases: 跳",
+    "aliases": [
+      "跳"
+    ]
+  },
+  "kaleidoscope": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "kaleidoscope",
+    "notes": "aliases: 万花筒|万花镜",
+    "aliases": [
+      "万花筒",
+      "万花镜"
+    ]
+  },
+  "karyl_point": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "karyl_point",
+    "notes": "aliases: 凯露指",
+    "aliases": [
+      "凯露指"
+    ]
+  },
+  "keep_away": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "keep_away",
+    "notes": "aliases: 远离",
+    "aliases": [
+      "远离"
+    ]
+  },
+  "keep_your_money": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "keep_your_money",
+    "notes": "aliases: 压岁钱不要交给",
+    "aliases": [
+      "压岁钱不要交给"
+    ]
+  },
+  "kick_ball": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "kick_ball",
+    "notes": "aliases: 踢球",
+    "aliases": [
+      "踢球"
+    ]
+  },
+  "kirby_hammer": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "kirby_hammer",
+    "notes": "aliases: 卡比锤|卡比重锤",
+    "aliases": [
+      "卡比锤",
+      "卡比重锤"
+    ]
+  },
+  "kiss": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "kiss",
+    "notes": "aliases: 亲|亲亲",
+    "aliases": [
+      "亲",
+      "亲亲"
+    ]
+  },
+  "klee_eat": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "klee_eat",
+    "notes": "aliases: 可莉吃",
+    "aliases": [
+      "可莉吃"
+    ]
+  },
+  "knock": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "knock",
+    "notes": "aliases: 敲",
+    "aliases": [
+      "敲"
+    ]
+  },
+  "kokona_seal": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "kokona_seal",
+    "notes": "aliases: 心奈印章",
+    "aliases": [
+      "心奈印章"
+    ]
+  },
+  "konata_watch": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "konata_watch",
+    "notes": "aliases: 泉此方看",
+    "aliases": [
+      "泉此方看"
+    ]
+  },
+  "learn": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "learn",
+    "notes": "aliases: 偷学",
+    "aliases": [
+      "偷学"
+    ]
+  },
+  "left_right_jump": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "left_right_jump",
+    "notes": "aliases: 左右横跳",
+    "aliases": [
+      "左右横跳"
+    ]
+  },
+  "let_me_in": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "let_me_in",
+    "notes": "aliases: 让我进去",
+    "aliases": [
+      "让我进去"
+    ]
+  },
+  "lick_candy": {
+    "emotion_tags": [
+      "调侃",
+      "鼓励",
+      "认可"
+    ],
+    "scene_tags": [
+      "聊天",
+      "鼓励"
+    ],
+    "style_tags": [
+      "通用",
+      "正向"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.34,
+    "enabled_for_auto": true,
+    "cooldown_group": "lick_candy",
+    "notes": "aliases: 舔糖|舔棒棒糖",
+    "aliases": [
+      "舔糖",
+      "舔棒棒糖"
+    ]
+  },
+  "lim_x_0": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "lim_x_0",
+    "notes": "aliases: 等价无穷小",
+    "aliases": [
+      "等价无穷小"
+    ]
+  },
+  "listen_music": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "listen_music",
+    "notes": "aliases: 听音乐",
+    "aliases": [
+      "听音乐"
+    ]
+  },
+  "little_angel": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "little_angel",
+    "notes": "aliases: 小天使",
+    "aliases": [
+      "小天使"
+    ]
+  },
+  "loading": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "loading",
+    "notes": "aliases: 加载中",
+    "aliases": [
+      "加载中"
+    ]
+  },
+  "look_flat": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "look_flat",
+    "notes": "aliases: 看扁",
+    "aliases": [
+      "看扁"
+    ]
+  },
+  "look_this_icon": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "look_this_icon",
+    "notes": "aliases: 看图标",
+    "aliases": [
+      "看图标"
+    ]
+  },
+  "loop": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "loop",
+    "notes": "aliases: 循环",
+    "aliases": [
+      "循环"
+    ]
+  },
+  "lost_dog": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "lost_dog",
+    "notes": "aliases: 寻狗启事",
+    "aliases": [
+      "寻狗启事"
+    ]
+  },
+  "love_you": {
+    "emotion_tags": [
+      "调侃",
+      "鼓励",
+      "认可"
+    ],
+    "scene_tags": [
+      "聊天",
+      "鼓励"
+    ],
+    "style_tags": [
+      "通用",
+      "正向"
+    ],
+    "risk_level": "low",
+    "auto_weight": 0.34,
+    "enabled_for_auto": true,
+    "cooldown_group": "love_you",
+    "notes": "aliases: 永远爱你",
+    "aliases": [
+      "永远爱你"
+    ]
+  },
+  "luotianyi_need": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "luotianyi_need",
+    "notes": "aliases: 洛天依要|天依要",
+    "aliases": [
+      "洛天依要",
+      "天依要"
+    ]
+  },
+  "luotianyi_say": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "luotianyi_say",
+    "notes": "aliases: 洛天依说|天依说",
+    "aliases": [
+      "洛天依说",
+      "天依说"
+    ]
+  },
+  "luoyonghao_say": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "luoyonghao_say",
+    "notes": "aliases: 罗永浩说",
+    "aliases": [
+      "罗永浩说"
+    ]
+  },
+  "luxun_say": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "luxun_say",
+    "notes": "aliases: 鲁迅说|鲁迅说过",
+    "aliases": [
+      "鲁迅说",
+      "鲁迅说过"
+    ]
+  },
+  "mahiro_readbook": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "mahiro_readbook",
+    "notes": "aliases: 真寻看书",
+    "aliases": [
+      "真寻看书"
+    ]
+  },
+  "maikease": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "maikease",
+    "notes": "aliases: 麦克阿瑟说",
+    "aliases": [
+      "麦克阿瑟说"
+    ]
+  },
+  "maimai_awaken": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "maimai_awaken",
+    "notes": "aliases: 旅行伙伴觉醒",
+    "aliases": [
+      "旅行伙伴觉醒"
+    ]
+  },
+  "maimai_join": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "maimai_join",
+    "notes": "aliases: 旅行伙伴加入",
+    "aliases": [
+      "旅行伙伴加入"
+    ]
+  },
+  "make_friend": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "make_friend",
+    "notes": "aliases: 交个朋友",
+    "aliases": [
+      "交个朋友"
+    ]
+  },
+  "marriage": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "marriage",
+    "notes": "aliases: 结婚申请|结婚登记",
+    "aliases": [
+      "结婚申请",
+      "结婚登记"
+    ]
+  },
+  "meteor": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "meteor",
+    "notes": "aliases: 流星",
+    "aliases": [
+      "流星"
+    ]
+  },
+  "mihoyo": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "mihoyo",
+    "notes": "aliases: 米哈游",
+    "aliases": [
+      "米哈游"
+    ]
+  },
+  "mourning": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "mourning",
+    "notes": "aliases: 上香",
+    "aliases": [
+      "上香"
+    ]
+  },
+  "murmur": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "murmur",
+    "notes": "aliases: 低语",
+    "aliases": [
+      "低语"
+    ]
+  },
+  "my_friend_say": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "my_friend_say",
+    "notes": "aliases: 我朋友说",
+    "aliases": [
+      "我朋友说"
+    ]
+  },
+  "my_opinion": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "my_opinion",
+    "notes": "aliases: 我的意见如下|我的意见是",
+    "aliases": [
+      "我的意见如下",
+      "我的意见是"
+    ]
+  },
+  "my_wife": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "my_wife",
+    "notes": "aliases: 我老婆|这是我老婆",
+    "aliases": [
+      "我老婆",
+      "这是我老婆"
+    ]
+  },
+  "nahida_bite": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "nahida_bite",
+    "notes": "aliases: 纳西妲啃|草神啃",
+    "aliases": [
+      "纳西妲啃",
+      "草神啃"
+    ]
+  },
+  "name_generator": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "name_generator",
+    "notes": "aliases: 亚文化取名机|亚名",
+    "aliases": [
+      "亚文化取名机",
+      "亚名"
+    ]
+  },
+  "need": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "need",
+    "notes": "aliases: 需要|你可能需要",
+    "aliases": [
+      "需要",
+      "你可能需要"
+    ]
+  },
+  "nekoha_holdsign": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "nekoha_holdsign",
+    "notes": "aliases: 猫羽雫举牌|猫猫举牌",
+    "aliases": [
+      "猫羽雫举牌",
+      "猫猫举牌"
+    ]
+  },
+  "nihaosaoa": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "nihaosaoa",
+    "notes": "aliases: 你好骚啊",
+    "aliases": [
+      "你好骚啊"
+    ]
+  },
+  "nijika_holdsign": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "nijika_holdsign",
+    "notes": "aliases: 虹夏举牌",
+    "aliases": [
+      "虹夏举牌"
+    ]
+  },
+  "no_response": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "no_response",
+    "notes": "aliases: 无响应",
+    "aliases": [
+      "无响应"
+    ]
+  },
+  "nokia": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "nokia",
+    "notes": "aliases: 诺基亚|有内鬼",
+    "aliases": [
+      "诺基亚",
+      "有内鬼"
+    ]
+  },
+  "note_for_leave": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "note_for_leave",
+    "notes": "aliases: 请假条",
+    "aliases": [
+      "请假条"
+    ]
+  },
+  "operator_generator": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "operator_generator",
+    "notes": "aliases: 合成大干员",
+    "aliases": [
+      "合成大干员"
+    ]
+  },
+  "oshi_no_ko": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "oshi_no_ko",
+    "notes": "aliases: 我推的网友",
+    "aliases": [
+      "我推的网友"
+    ]
+  },
+  "osu": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "osu",
+    "notes": "aliases: osu",
+    "aliases": [
+      "osu"
+    ]
+  },
+  "out": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "out",
+    "notes": "aliases: out",
+    "aliases": [
+      "out"
+    ]
+  },
+  "overtime": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "overtime",
+    "notes": "aliases: 加班",
+    "aliases": [
+      "加班"
+    ]
+  },
+  "p5letter": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "p5letter",
+    "notes": "aliases: p5预告信",
+    "aliases": [
+      "p5预告信"
+    ]
+  },
+  "paint": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "paint",
+    "notes": "aliases: 这像画吗",
+    "aliases": [
+      "这像画吗"
+    ]
+  },
+  "painter": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "painter",
+    "notes": "aliases: 小画家",
+    "aliases": [
+      "小画家"
+    ]
+  },
+  "panda_dragon_figure": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "panda_dragon_figure",
+    "notes": "aliases: 熊猫龙图",
+    "aliases": [
+      "熊猫龙图"
+    ]
+  },
+  "pass_the_buck": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "pass_the_buck",
+    "notes": "aliases: 推锅|甩锅",
+    "aliases": [
+      "推锅",
+      "甩锅"
+    ]
+  },
+  "pat": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "pat",
+    "notes": "aliases: 拍",
+    "aliases": [
+      "拍"
+    ]
+  },
+  "pepe_raise": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "pepe_raise",
+    "notes": "aliases: 佩佩举",
+    "aliases": [
+      "佩佩举"
+    ]
+  },
+  "perfect": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "perfect",
+    "notes": "aliases: 完美",
+    "aliases": [
+      "完美"
+    ]
+  },
+  "petpet": {
+    "emotion_tags": [
+      "调侃",
+      "安慰",
+      "鼓励",
+      "认可"
+    ],
+    "scene_tags": [
+      "聊天",
+      "安抚",
+      "鼓励"
+    ],
+    "style_tags": [
+      "通用",
+      "安抚",
+      "正向"
+    ],
+    "risk_level": "low",
+    "auto_weight": 0.34,
+    "enabled_for_auto": true,
+    "cooldown_group": "petpet",
+    "notes": "aliases: 摸|摸摸|摸头|rua",
+    "aliases": [
+      "摸",
+      "摸摸",
+      "摸头",
+      "rua"
+    ]
+  },
+  "pinch": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "pinch",
+    "notes": "aliases: 捏|捏脸",
+    "aliases": [
+      "捏",
+      "捏脸"
+    ]
+  },
+  "pixelate": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "pixelate",
+    "notes": "aliases: 像素化",
+    "aliases": [
+      "像素化"
+    ]
+  },
+  "pjsk": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "pjsk",
+    "notes": "aliases: pjsk|世界计划",
+    "aliases": [
+      "pjsk",
+      "世界计划"
+    ]
+  },
+  "plana_eat": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "plana_eat",
+    "notes": "aliases: 普拉娜吃|普拉娜舔",
+    "aliases": [
+      "普拉娜吃",
+      "普拉娜舔"
+    ]
+  },
+  "play_baseball": {
+    "emotion_tags": [
+      "调侃",
+      "鼓励",
+      "认可"
+    ],
+    "scene_tags": [
+      "聊天",
+      "鼓励"
+    ],
+    "style_tags": [
+      "通用",
+      "正向"
+    ],
+    "risk_level": "high",
+    "auto_weight": 0.18,
+    "enabled_for_auto": true,
+    "cooldown_group": "play_baseball",
+    "notes": "aliases: 打棒球",
+    "aliases": [
+      "打棒球"
+    ]
+  },
+  "play_basketball": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "high",
+    "auto_weight": 0.18,
+    "enabled_for_auto": true,
+    "cooldown_group": "play_basketball",
+    "notes": "aliases: 打篮球|火柴人打篮球",
+    "aliases": [
+      "打篮球",
+      "火柴人打篮球"
+    ]
+  },
+  "play_game": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "play_game",
+    "notes": "aliases: 玩游戏",
+    "aliases": [
+      "玩游戏"
+    ]
+  },
+  "play_together": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "play_together",
+    "notes": "aliases: 一起玩",
+    "aliases": [
+      "一起玩"
+    ]
+  },
+  "police": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "police",
+    "notes": "aliases: 出警",
+    "aliases": [
+      "出警"
+    ]
+  },
+  "policeman": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "policeman",
+    "notes": "aliases: 警察",
+    "aliases": [
+      "警察"
+    ]
+  },
+  "pornhub": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "pornhub",
+    "notes": "aliases: ph|pornhub",
+    "aliases": [
+      "ph",
+      "pornhub"
+    ]
+  },
+  "potato": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "potato",
+    "notes": "aliases: 土豆",
+    "aliases": [
+      "土豆"
+    ]
+  },
+  "pound": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "pound",
+    "notes": "aliases: 捣",
+    "aliases": [
+      "捣"
+    ]
+  },
+  "praise": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "praise",
+    "notes": "aliases: 表扬",
+    "aliases": [
+      "表扬"
+    ]
+  },
+  "printing": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "high",
+    "auto_weight": 0.18,
+    "enabled_for_auto": true,
+    "cooldown_group": "printing",
+    "notes": "aliases: 打印",
+    "aliases": [
+      "打印"
+    ]
+  },
+  "prpr": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "prpr",
+    "notes": "aliases: 舔|舔屏|prpr",
+    "aliases": [
+      "舔",
+      "舔屏",
+      "prpr"
+    ]
+  },
+  "psyduck": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "psyduck",
+    "notes": "aliases: 可达鸭",
+    "aliases": [
+      "可达鸭"
+    ]
+  },
+  "punch": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "high",
+    "auto_weight": 0.18,
+    "enabled_for_auto": true,
+    "cooldown_group": "punch",
+    "notes": "aliases: 打拳",
+    "aliases": [
+      "打拳"
+    ]
+  },
+  "pyramid": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "pyramid",
+    "notes": "aliases: 四棱锥|金字塔",
+    "aliases": [
+      "四棱锥",
+      "金字塔"
+    ]
+  },
+  "qiegewala": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "qiegewala",
+    "notes": "aliases: 切格瓦拉",
+    "aliases": [
+      "切格瓦拉"
+    ]
+  },
+  "raise_image": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "raise_image",
+    "notes": "aliases: 举",
+    "aliases": [
+      "举"
+    ]
+  },
+  "raise_sign": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "raise_sign",
+    "notes": "aliases: 举牌",
+    "aliases": [
+      "举牌"
+    ]
+  },
+  "read_book": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "read_book",
+    "notes": "aliases: 看书",
+    "aliases": [
+      "看书"
+    ]
+  },
+  "remote_control": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "remote_control",
+    "notes": "aliases: 遥控|控制",
+    "aliases": [
+      "遥控",
+      "控制"
+    ]
+  },
+  "repeat": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "repeat",
+    "notes": "aliases: 复读",
+    "aliases": [
+      "复读"
+    ]
+  },
+  "rip": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "rip",
+    "notes": "aliases: 撕",
+    "aliases": [
+      "撕"
+    ]
+  },
+  "rip_angrily": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "rip_angrily",
+    "notes": "aliases: 怒撕",
+    "aliases": [
+      "怒撕"
+    ]
+  },
+  "rip_clothes": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "rip_clothes",
+    "notes": "aliases: 撕衣服",
+    "aliases": [
+      "撕衣服"
+    ]
+  },
+  "rise_dead": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "rise_dead",
+    "notes": "aliases: 诈尸|秽土转生",
+    "aliases": [
+      "诈尸",
+      "秽土转生"
+    ]
+  },
+  "roll": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "roll",
+    "notes": "aliases: 滚",
+    "aliases": [
+      "滚"
+    ]
+  },
+  "rotate_3d": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "rotate_3d",
+    "notes": "aliases: 三维旋转",
+    "aliases": [
+      "三维旋转"
+    ]
+  },
+  "rub": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "rub",
+    "notes": "aliases: 贴|贴贴|蹭|蹭蹭",
+    "aliases": [
+      "贴",
+      "贴贴",
+      "蹭",
+      "蹭蹭"
+    ]
+  },
+  "run": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "run",
+    "notes": "aliases: 快跑",
+    "aliases": [
+      "快跑"
+    ]
+  },
+  "run_away": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "run_away",
+    "notes": "aliases: 快逃",
+    "aliases": [
+      "快逃"
+    ]
+  },
+  "safe_sense": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "safe_sense",
+    "notes": "aliases: 安全感",
+    "aliases": [
+      "安全感"
+    ]
+  },
+  "saimin_app": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "saimin_app",
+    "notes": "aliases: 催眠app",
+    "aliases": [
+      "催眠app"
+    ]
+  },
+  "scratch_head": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "scratch_head",
+    "notes": "aliases: 挠头",
+    "aliases": [
+      "挠头"
+    ]
+  },
+  "scratchcard": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "scratchcard",
+    "notes": "aliases: 刮刮乐",
+    "aliases": [
+      "刮刮乐"
+    ]
+  },
+  "scroll": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "scroll",
+    "notes": "aliases: 滚屏",
+    "aliases": [
+      "滚屏"
+    ]
+  },
+  "seal": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "seal",
+    "notes": "aliases: 源石封印",
+    "aliases": [
+      "源石封印"
+    ]
+  },
+  "sekaiichi_kawaii": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "sekaiichi_kawaii",
+    "notes": "aliases: 世界第一可爱",
+    "aliases": [
+      "世界第一可爱"
+    ]
+  },
+  "shake_head": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "shake_head",
+    "notes": "aliases: 晃脑",
+    "aliases": [
+      "晃脑"
+    ]
+  },
+  "shiroko_pero": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "shiroko_pero",
+    "notes": "aliases: 白子舔",
+    "aliases": [
+      "白子舔"
+    ]
+  },
+  "shishilani": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "shishilani",
+    "notes": "aliases: 食屎啦你",
+    "aliases": [
+      "食屎啦你"
+    ]
+  },
+  "shock": {
+    "emotion_tags": [
+      "调侃",
+      "惊讶"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用",
+      "反应"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.26,
+    "enabled_for_auto": true,
+    "cooldown_group": "shock",
+    "notes": "aliases: 震惊",
+    "aliases": [
+      "震惊"
+    ]
+  },
+  "shuifandui": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "shuifandui",
+    "notes": "aliases: 谁反对",
+    "aliases": [
+      "谁反对"
+    ]
+  },
+  "shutup": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "shutup",
+    "notes": "aliases: 别说了",
+    "aliases": [
+      "别说了"
+    ]
+  },
+  "sit_still": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "sit_still",
+    "notes": "aliases: 坐得住",
+    "aliases": [
+      "坐得住"
+    ]
+  },
+  "slap": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "slap",
+    "notes": "aliases: 一巴掌",
+    "aliases": [
+      "一巴掌"
+    ]
+  },
+  "slogan": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "slogan",
+    "notes": "aliases: 口号",
+    "aliases": [
+      "口号"
+    ]
+  },
+  "smash": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "smash",
+    "notes": "aliases: 砸",
+    "aliases": [
+      "砸"
+    ]
+  },
+  "sold_out": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "sold_out",
+    "notes": "aliases: 卖掉了",
+    "aliases": [
+      "卖掉了"
+    ]
+  },
+  "speechless": {
+    "emotion_tags": [
+      "调侃",
+      "吐槽",
+      "无语"
+    ],
+    "scene_tags": [
+      "聊天",
+      "调侃"
+    ],
+    "style_tags": [
+      "通用",
+      "整活"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.28,
+    "enabled_for_auto": true,
+    "cooldown_group": "speechless",
+    "notes": "aliases: 无语",
+    "aliases": [
+      "无语"
+    ]
+  },
+  "sphere_rotate": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "sphere_rotate",
+    "notes": "aliases: 球面旋转",
+    "aliases": [
+      "球面旋转"
+    ]
+  },
+  "spider": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "spider",
+    "notes": "aliases: 蜘蛛|蜘蛛爬",
+    "aliases": [
+      "蜘蛛",
+      "蜘蛛爬"
+    ]
+  },
+  "stare_at_you": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "stare_at_you",
+    "notes": "aliases: 盯着你",
+    "aliases": [
+      "盯着你"
+    ]
+  },
+  "steam_message": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "steam_message",
+    "notes": "aliases: steam消息",
+    "aliases": [
+      "steam消息"
+    ]
+  },
+  "step_on": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "step_on",
+    "notes": "aliases: 踩",
+    "aliases": [
+      "踩"
+    ]
+  },
+  "stew": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "stew",
+    "notes": "aliases: 炖",
+    "aliases": [
+      "炖"
+    ]
+  },
+  "stickman_dancing": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "stickman_dancing",
+    "notes": "aliases: 跳舞|火柴人跳舞",
+    "aliases": [
+      "跳舞",
+      "火柴人跳舞"
+    ]
+  },
+  "subject3": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "subject3",
+    "notes": "aliases: 科目三",
+    "aliases": [
+      "科目三"
+    ]
+  },
+  "suck": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "suck",
+    "notes": "aliases: 吸|嗦",
+    "aliases": [
+      "吸",
+      "嗦"
+    ]
+  },
+  "support": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "support",
+    "notes": "aliases: 精神支柱",
+    "aliases": [
+      "精神支柱"
+    ]
+  },
+  "swirl_turn": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "swirl_turn",
+    "notes": "aliases: 回旋转|旋风转",
+    "aliases": [
+      "回旋转",
+      "旋风转"
+    ]
+  },
+  "symmetric": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "symmetric",
+    "notes": "aliases: 对称",
+    "aliases": [
+      "对称"
+    ]
+  },
+  "tankuku_raisesign": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "tankuku_raisesign",
+    "notes": "aliases: 唐可可举牌",
+    "aliases": [
+      "唐可可举牌"
+    ]
+  },
+  "taunt": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "taunt",
+    "notes": "aliases: 嘲讽",
+    "aliases": [
+      "嘲讽"
+    ]
+  },
+  "teach": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "teach",
+    "notes": "aliases: 讲课|敲黑板",
+    "aliases": [
+      "讲课",
+      "敲黑板"
+    ]
+  },
+  "tease": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "tease",
+    "notes": "aliases: 拿捏|戏弄",
+    "aliases": [
+      "拿捏",
+      "戏弄"
+    ]
+  },
+  "telescope": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "telescope",
+    "notes": "aliases: 望远镜",
+    "aliases": [
+      "望远镜"
+    ]
+  },
+  "thermometer_gun": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "high",
+    "auto_weight": 0.18,
+    "enabled_for_auto": true,
+    "cooldown_group": "thermometer_gun",
+    "notes": "aliases: 体温枪",
+    "aliases": [
+      "体温枪"
+    ]
+  },
+  "think_what": {
+    "emotion_tags": [
+      "调侃",
+      "惊讶",
+      "疑惑"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用",
+      "反应",
+      "疑问"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.26,
+    "enabled_for_auto": true,
+    "cooldown_group": "think_what",
+    "notes": "aliases: 想什么",
+    "aliases": [
+      "想什么"
+    ]
+  },
+  "this_chicken": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "this_chicken",
+    "notes": "aliases: 这是鸡|🐔",
+    "aliases": [
+      "这是鸡",
+      "🐔"
+    ]
+  },
+  "throw": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "throw",
+    "notes": "aliases: 丢|扔",
+    "aliases": [
+      "丢",
+      "扔"
+    ]
+  },
+  "throw_gif": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "throw_gif",
+    "notes": "aliases: 抛|掷",
+    "aliases": [
+      "抛",
+      "掷"
+    ]
+  },
+  "thump": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "thump",
+    "notes": "aliases: 捶",
+    "aliases": [
+      "捶"
+    ]
+  },
+  "thump_wildly": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "thump_wildly",
+    "notes": "aliases: 捶爆|爆捶",
+    "aliases": [
+      "捶爆",
+      "爆捶"
+    ]
+  },
+  "tightly": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "tightly",
+    "notes": "aliases: 紧贴|紧紧贴着",
+    "aliases": [
+      "紧贴",
+      "紧紧贴着"
+    ]
+  },
+  "time_to_go": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "time_to_go",
+    "notes": "aliases: 该走了",
+    "aliases": [
+      "该走了"
+    ]
+  },
+  "together": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "together",
+    "notes": "aliases: 一起",
+    "aliases": [
+      "一起"
+    ]
+  },
+  "tom_tease": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "tom_tease",
+    "notes": "aliases: 汤姆嘲笑",
+    "aliases": [
+      "汤姆嘲笑"
+    ]
+  },
+  "tomb_yeah": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "tomb_yeah",
+    "notes": "aliases: 上坟|坟前比耶",
+    "aliases": [
+      "上坟",
+      "坟前比耶"
+    ]
+  },
+  "trance": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "trance",
+    "notes": "aliases: 恍惚",
+    "aliases": [
+      "恍惚"
+    ]
+  },
+  "trolley": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "trolley",
+    "notes": "aliases: 推车",
+    "aliases": [
+      "推车"
+    ]
+  },
+  "turn": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "turn",
+    "notes": "aliases: 转",
+    "aliases": [
+      "转"
+    ]
+  },
+  "twist": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "twist",
+    "notes": "aliases: 搓",
+    "aliases": [
+      "搓"
+    ]
+  },
+  "universal": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "universal",
+    "notes": "aliases: 万能表情|空白表情",
+    "aliases": [
+      "万能表情",
+      "空白表情"
+    ]
+  },
+  "upside_down": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "upside_down",
+    "notes": "aliases: 反了",
+    "aliases": [
+      "反了"
+    ]
+  },
+  "vibrate": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "vibrate",
+    "notes": "aliases: 震动",
+    "aliases": [
+      "震动"
+    ]
+  },
+  "wakeup": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "wakeup",
+    "notes": "aliases: 好起来了",
+    "aliases": [
+      "好起来了"
+    ]
+  },
+  "wallpaper": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "wallpaper",
+    "notes": "aliases: 墙纸",
+    "aliases": [
+      "墙纸"
+    ]
+  },
+  "walnut_pad": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "walnut_pad",
+    "notes": "aliases: 胡桃平板",
+    "aliases": [
+      "胡桃平板"
+    ]
+  },
+  "walnut_zoom": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "walnut_zoom",
+    "notes": "aliases: 胡桃放大",
+    "aliases": [
+      "胡桃放大"
+    ]
+  },
+  "wangjingze": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "wangjingze",
+    "notes": "aliases: 王境泽",
+    "aliases": [
+      "王境泽"
+    ]
+  },
+  "washer": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "washer",
+    "notes": "aliases: 洗衣机",
+    "aliases": [
+      "洗衣机"
+    ]
+  },
+  "wave": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "wave",
+    "notes": "aliases: 波纹",
+    "aliases": [
+      "波纹"
+    ]
+  },
+  "wechat_pay": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "wechat_pay",
+    "notes": "aliases: 微信支付",
+    "aliases": [
+      "微信支付"
+    ]
+  },
+  "weisuoyuwei": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "weisuoyuwei",
+    "notes": "aliases: 为所欲为",
+    "aliases": [
+      "为所欲为"
+    ]
+  },
+  "what_he_wants": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "what_he_wants",
+    "notes": "aliases: 最想要的东西",
+    "aliases": [
+      "最想要的东西"
+    ]
+  },
+  "what_i_want_to_do": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "what_i_want_to_do",
+    "notes": "aliases: 我想上的",
+    "aliases": [
+      "我想上的"
+    ]
+  },
+  "why_at_me": {
+    "emotion_tags": [
+      "调侃",
+      "惊讶",
+      "疑惑"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用",
+      "反应",
+      "疑问"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.26,
+    "enabled_for_auto": true,
+    "cooldown_group": "why_at_me",
+    "notes": "aliases: 为什么@我",
+    "aliases": [
+      "为什么@我"
+    ]
+  },
+  "why_have_hands": {
+    "emotion_tags": [
+      "调侃",
+      "惊讶",
+      "疑惑"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用",
+      "反应",
+      "疑问"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.26,
+    "enabled_for_auto": true,
+    "cooldown_group": "why_have_hands",
+    "notes": "aliases: 为什么要有手",
+    "aliases": [
+      "为什么要有手"
+    ]
+  },
+  "windmill_turn": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "windmill_turn",
+    "notes": "aliases: 风车转",
+    "aliases": [
+      "风车转"
+    ]
+  },
+  "wish_fail": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "wish_fail",
+    "notes": "aliases: 许愿失败",
+    "aliases": [
+      "许愿失败"
+    ]
+  },
+  "wooden_fish": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "wooden_fish",
+    "notes": "aliases: 木鱼",
+    "aliases": [
+      "木鱼"
+    ]
+  },
+  "worship": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "worship",
+    "notes": "aliases: 膜|膜拜",
+    "aliases": [
+      "膜",
+      "膜拜"
+    ]
+  },
+  "wujing": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "wujing",
+    "notes": "aliases: 吴京中国",
+    "aliases": [
+      "吴京中国"
+    ]
+  },
+  "wunian": {
+    "emotion_tags": [
+      "调侃",
+      "疑惑"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用",
+      "疑问"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.24,
+    "enabled_for_auto": true,
+    "cooldown_group": "wunian",
+    "notes": "aliases: 五年怎么过的",
+    "aliases": [
+      "五年怎么过的"
+    ]
+  },
+  "wuyage": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "wuyage",
+    "notes": "aliases: 乌鸦哥",
+    "aliases": [
+      "乌鸦哥"
+    ]
+  },
+  "yalidaye": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "yalidaye",
+    "notes": "aliases: 压力大爷",
+    "aliases": [
+      "压力大爷"
+    ]
+  },
+  "yeshu": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "yeshu",
+    "notes": "aliases: 椰树椰汁",
+    "aliases": [
+      "椰树椰汁"
+    ]
+  },
+  "you_dont_get": {
+    "emotion_tags": [
+      "调侃",
+      "疑惑"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用",
+      "疑问"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.24,
+    "enabled_for_auto": true,
+    "cooldown_group": "you_dont_get",
+    "notes": "aliases: 你不懂啦",
+    "aliases": [
+      "你不懂啦"
+    ]
+  },
+  "you_should_call": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "you_should_call",
+    "notes": "aliases: 致电|你应该致电",
+    "aliases": [
+      "致电",
+      "你应该致电"
+    ]
+  },
+  "your_new_years_eve": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "your_new_years_eve",
+    "notes": "aliases: 你的跨年",
+    "aliases": [
+      "你的跨年"
+    ]
+  },
+  "youtube": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "youtube",
+    "notes": "aliases: yt|youtube",
+    "aliases": [
+      "yt",
+      "youtube"
+    ]
+  },
+  "zengxiaoxian": {
+    "emotion_tags": [
+      "调侃"
+    ],
+    "scene_tags": [
+      "聊天"
+    ],
+    "style_tags": [
+      "通用"
+    ],
+    "risk_level": "medium",
+    "auto_weight": 0.2,
+    "enabled_for_auto": true,
+    "cooldown_group": "zengxiaoxian",
+    "notes": "aliases: 曾小贤",
+    "aliases": [
+      "曾小贤"
+    ]
+  }
+}

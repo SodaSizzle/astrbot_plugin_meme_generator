@@ -2,7 +2,7 @@
 
 import asyncio
 from pathlib import Path
-from typing import List, Optional
+from typing import Optional
 from meme_generator.tools import MemeProperties, MemeSortBy, render_meme_list
 from meme_generator.resources import check_resources_in_background
 from astrbot.api import logger
@@ -12,18 +12,27 @@ import astrbot.core.message.components as Comp
 from .template_manager import TemplateManager
 from .param_collector import ParamCollector
 from .image_generator import ImageGenerator
-from ..config import MemeConfig
-from ..utils import ImageUtils, CooldownManager, AvatarCache, NetworkUtils, CacheManager
+from ..utils.image_utils import ImageUtils
+from ..utils.cooldown_manager import CooldownManager
+from ..utils.avatar_cache import AvatarCache
+from ..utils.network_utils import NetworkUtils
+from ..utils.cache_manager import CacheManager
+from ..utils.resource_status import ResourceStatus
+
+
+class ResourceNotReadyError(RuntimeError):
+    """Raised when meme resources are not ready for user-triggered generation."""
 
 
 class MemeManager:
     """表情包管理器 - 核心业务逻辑"""
     
-    def __init__(self, config: MemeConfig, data_dir: str = None):
+    def __init__(self, config, data_dir: str = None):
         self.config = config
         self.template_manager = TemplateManager()
         self.image_generator = ImageGenerator()
         self.cooldown_manager = CooldownManager(config.cooldown_seconds)
+        self.resource_status = ResourceStatus()
 
         # 初始化头像缓存和网络工具
         # 使用传入的数据目录，如果没有则使用默认路径
@@ -64,14 +73,50 @@ class MemeManager:
 
     async def _check_resources_and_refresh(self):
         """检查资源并在完成后刷新模板"""
+        self.resource_status.mark_started()
+        heartbeat_task = asyncio.create_task(self._log_resource_heartbeat())
         try:
-            # 在线程池中执行资源检查（因为它是同步的）
             await asyncio.to_thread(check_resources_in_background)
-            # 刷新模板列表
             await self.template_manager.refresh_templates()
+            all_memes = await self.template_manager.get_all_memes()
+            self.resource_status.mark_ready(len(all_memes))
+            if self.resource_status.ready:
+                logger.info(
+                    "✅ 表情包资源就绪 - 共 %d 个模板，耗时 %.1f 秒",
+                    self.resource_status.total_memes,
+                    self.resource_status.elapsed_seconds(),
+                )
+            else:
+                logger.warning("⚠️ 表情包资源检查完成，但未加载到任何模板")
         except Exception as e:
+            self.resource_status.mark_failed(str(e))
             logger.error(f"❌ 表情包资源检查失败: {e}")
             logger.warning("⚠️ 部分表情包模板可能无法正常使用，建议检查网络连接后重启插件")
+        finally:
+            heartbeat_task.cancel()
+            try:
+                await heartbeat_task
+            except (asyncio.CancelledError, Exception):
+                pass
+
+    async def _log_resource_heartbeat(self, interval: float = 10.0):
+        """资源下载期间，定期把进度打印到日志"""
+        try:
+            while self.resource_status.in_progress:
+                await asyncio.sleep(interval)
+                if not self.resource_status.in_progress:
+                    break
+                elapsed = self.resource_status.elapsed_seconds()
+                logger.info(
+                    "⏳ 表情包资源初始化中 - 已耗时 %.0f 秒，首次启动需下载资源包",
+                    elapsed,
+                )
+        except asyncio.CancelledError:
+            raise
+
+    async def get_resource_block_message(self, message_str: str) -> str | None:
+        keyword = await self.template_manager.find_keyword(message_str)
+        return self.resource_status.get_block_message(keyword_matched=bool(keyword))
     
     async def generate_template_list(self) -> bytes | None:
         """
@@ -161,6 +206,10 @@ class MemeManager:
         if not keyword:
             return None
 
+        block_message = self.resource_status.get_block_message(keyword_matched=True)
+        if block_message:
+            raise ResourceNotReadyError(block_message)
+
         if self.config.is_template_disabled(keyword):
             return None
 
@@ -188,4 +237,38 @@ class MemeManager:
         # 记录用户使用时间
         self.cooldown_manager.record_user_use(user_id)
 
+        return image
+
+    async def generate_meme_by_template_key(
+        self,
+        event: AstrMessageEvent,
+        template_key: str,
+        text_candidates: list[str] | None = None,
+    ) -> Optional[bytes]:
+        """Generate a meme directly from a selected template key."""
+        meme = await self.template_manager.find_meme(template_key)
+        if not meme:
+            return None
+        if self.config.is_template_disabled(template_key):
+            return None
+
+        meme_images, texts, options = await self.param_collector.collect_auto_params(
+            event=event,
+            meme=meme,
+            text_candidates=text_candidates or [],
+        )
+
+        image: bytes = await self.image_generator.generate_image(
+            meme,
+            meme_images,
+            texts,
+            options,
+            self.config.generation_timeout,
+        )
+        try:
+            compressed = ImageUtils.compress_image(image)
+            if compressed:
+                image = compressed
+        except Exception:
+            pass
         return image

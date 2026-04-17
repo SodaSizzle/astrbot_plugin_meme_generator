@@ -40,5 +40,25 @@
         "type": "list",
         "hint": "管理员可将不适合当前环境的表情包模板添加到此列表中禁用",
         "default": []
+    },
+    "enable_auto_meme": {
+        "description": "启用自动补图",
+        "type": "bool",
+        "hint": "在 AstrBot 正常回复后，根据用户消息和机器人回复决定是否额外发送一张表情图",
+        "default": false
+    },
+    "auto_meme_scope": {
+        "description": "自动补图在哪里生效",
+        "type": "string",
+        "hint": "all = 群聊和私聊都会自动发图；group = 只在群聊发；private = 只在私聊发",
+        "default": "all",
+        "options": ["all", "group", "private"]
+    },
+    "auto_meme_level": {
+        "description": "自动补图活跃度",
+        "type": "string",
+        "hint": "保守 = 只在情绪很明显时才发（门槛高），两次至少隔 5 分钟，一段对话最多 1 张；平衡 = 默认推荐，门槛适中，两次至少隔 2 分钟，最多 1 张；活跃 = 情绪稍微明显就发（门槛低），两次至少隔 1 分钟，一段对话可发 2 张。没匹配到情绪时都不会发",
+        "default": "平衡",
+        "options": ["保守", "平衡", "活跃"]
     }
 }
