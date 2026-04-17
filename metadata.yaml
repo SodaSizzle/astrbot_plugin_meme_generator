@@ -1,6 +1,9 @@
 name: astrbot_plugin_meme_generator
-desc: 高性能表情包生成器 - 支持多种模板和智能参数识别，具备头像缓存、用户冷却、超时控制等高级功能
+display_name: 表情包生成插件
+desc: "AstrBot 2.0 表情包生成插件 - 支持关键词触发与自动补图；基于用户消息和机器人回复进行本地情绪判断，支持模板池筛选、冷却控制与禁用管理"
 help: 使用关键词触发表情包生成，支持智能匹配模式。命令：表情列表、模板信息 [关键词]、禁用模板 [模板名]、启用模板 [模板名]、禁用列表
-version: v1.0.0
+version: v2.0
 author: SodaSizzle
+support_platforms:
+  - aiocqhttp
 repo: https://github.com/SodaSizzle/astrbot_plugin_meme_generator
