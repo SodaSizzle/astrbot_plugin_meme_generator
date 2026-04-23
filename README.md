@@ -100,8 +100,7 @@ export LANG=en_US.UTF-8
 仍有问题时，可继续安装字体与 fontconfig：
 
 ```bash
-apt update && apt install -y fontconfig fonts-dejavu-core
-fc-cache -fv
+apt update && apt install -y fontconfig fonts-noto-cjk && fc-cache -fv
 ```
 
 ## 使用方式
