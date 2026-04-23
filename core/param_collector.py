@@ -1,12 +1,19 @@
 """参数收集模块"""
 
 import base64
-from typing import List, Dict, Union, Tuple
+from pathlib import Path
+from typing import Awaitable, Callable, Dict, List, Tuple, Union
 from meme_generator import Meme
 from meme_generator import Image as MemeImage
+from astrbot.api import logger
 from astrbot.core.platform import AstrMessageEvent
 import astrbot.core.message.components as Comp
 from ..utils.platform_utils import PlatformUtils
+
+try:
+    from astrbot.core.utils.quoted_message import extract_quoted_message_images
+except Exception:  # pragma: no cover - fallback for older AstrBot versions
+    extract_quoted_message_images = None
 
 
 class ParamCollector:
@@ -60,11 +67,8 @@ class ParamCollector:
             elif isinstance(_seg, Comp.Plain):
                 self._process_plain_segment(_seg, keyword, texts)
 
-        # 处理引用消息内容
         reply_seg = next((seg for seg in messages if isinstance(seg, Comp.Reply)), None)
-        if reply_seg and reply_seg.chain:
-            for seg in reply_seg.chain:
-                await _process_segment(seg, "引用用户")
+        await self._process_reply_segments(event, reply_seg, _process_segment, meme_images)
 
         # 处理当前消息内容
         for seg in messages:
@@ -128,9 +132,7 @@ class ParamCollector:
                 )
 
         reply_seg = next((seg for seg in messages if isinstance(seg, Comp.Reply)), None)
-        if reply_seg and reply_seg.chain:
-            for seg in reply_seg.chain:
-                await _process_segment(seg, "引用用户")
+        await self._process_reply_segments(event, reply_seg, _process_segment, meme_images)
 
         for seg in messages:
             await _process_segment(seg, sender_name)
@@ -164,18 +166,81 @@ class ParamCollector:
     async def _process_image_segment(self, seg: Comp.Image, name: str, meme_images: List[MemeImage]):
         """处理图片组件"""
         if hasattr(seg, "url") and seg.url:
-            img_url = seg.url
-            if self.network_utils and (file_content := await self.network_utils.download_image(img_url)):
-                meme_images.append(MemeImage(name, file_content))
+            await self._append_image_ref(seg.url, name, meme_images)
+            return
 
-        elif hasattr(seg, "file"):
-            file_content = seg.file
-            if isinstance(file_content, str):
-                if file_content.startswith("base64://"):
-                    file_content = file_content[len("base64://"):]
-                file_content = base64.b64decode(file_content)
-            if isinstance(file_content, bytes):
-                meme_images.append(MemeImage(name, file_content))
+        for attr in ("file", "path"):
+            image_ref = getattr(seg, attr, None)
+            if image_ref:
+                await self._append_image_ref(image_ref, name, meme_images)
+                return
+
+    async def _process_reply_segments(
+            self,
+            event: AstrMessageEvent,
+            reply_seg: Comp.Reply | None,
+            process_segment: Callable[[object, str], Awaitable[None]],
+            meme_images: List[MemeImage],
+    ) -> None:
+        """处理引用消息内容，必要时回退到引用消息提取器。"""
+        if not reply_seg:
+            return
+
+        reply_image_count = len(meme_images)
+        for attr in ("chain", "message", "origin", "content"):
+            payload = getattr(reply_seg, attr, None)
+            if isinstance(payload, list):
+                for seg in payload:
+                    await process_segment(seg, "引用用户")
+                break
+
+        if len(meme_images) > reply_image_count or extract_quoted_message_images is None:
+            return
+
+        try:
+            image_refs = await extract_quoted_message_images(event, reply_seg)
+        except Exception as exc:  # noqa: BLE001
+            logger.warning("引用图片回退提取失败: %s", exc)
+            return
+
+        for image_ref in image_refs:
+            await self._append_image_ref(image_ref, "引用用户", meme_images)
+
+    async def _append_image_ref(
+            self,
+            image_ref: str | bytes,
+            name: str,
+            meme_images: List[MemeImage],
+    ) -> None:
+        """把图片引用解析为图片字节后加入参数列表。"""
+        file_content: bytes | None = None
+
+        if isinstance(image_ref, bytes):
+            file_content = image_ref
+        elif isinstance(image_ref, str):
+            if image_ref.startswith("base64://"):
+                try:
+                    file_content = base64.b64decode(image_ref[len("base64://"):])
+                except Exception:  # noqa: BLE001
+                    return
+            elif image_ref.startswith(("http://", "https://")):
+                if self.network_utils:
+                    file_content = await self.network_utils.download_image(image_ref)
+            else:
+                image_path = Path(image_ref)
+                if image_path.is_file():
+                    try:
+                        file_content = image_path.read_bytes()
+                    except OSError:
+                        return
+                else:
+                    try:
+                        file_content = base64.b64decode(image_ref, validate=True)
+                    except Exception:  # noqa: BLE001
+                        return
+
+        if isinstance(file_content, bytes):
+            meme_images.append(MemeImage(name, file_content))
 
     async def _process_at_segment(
             self,
