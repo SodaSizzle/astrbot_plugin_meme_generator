@@ -18,6 +18,7 @@ async def render_with_fallback(
 def format_help_menu_text(template_data: dict[str, Any]) -> str:
     version = template_data.get("version") or "unknown"
     author = template_data.get("author") or "unknown"
+    trigger_prefix = template_data.get("trigger_prefix") or ""
     basic_commands = _format_command_lines(template_data.get("basic_commands", []))
     admin_commands = _format_command_lines(template_data.get("admin_commands", []))
     has_admin_commands = bool(
@@ -45,10 +46,14 @@ def format_help_menu_text(template_data: dict[str, Any]) -> str:
         [
             "",
             "使用建议：",
-            "1. 直接发送表情包关键词即可生成，例如“加载中”或“挠头”。",
+            (
+                "1. 直接发送表情包关键词即可生成，例如“加载中”或“挠头”。"
+                if not trigger_prefix
+                else f"1. 当前需携带触发前缀“{trigger_prefix}”生成，例如“{trigger_prefix}加载中”。"
+            ),
             "2. 支持 @用户 自动获取头像，也可以上传图片作为输入。",
             "3. 引用他人消息时，可直接沿用对方头像与昵称信息。",
-            "4. 命令前缀默认为 /，也可以直接 @机器人 使用。",
+            "4. 帮助、列表、信息和管理命令不受表情触发前缀影响。",
         ]
     )
     return "\n".join(lines)
@@ -59,6 +64,8 @@ def format_plugin_status_text(template_data: dict[str, Any]) -> str:
     author = template_data.get("author") or "unknown"
     plugin_status = "启用" if template_data.get("plugin_enabled") else "禁用"
     avatar_cache_status = "开启" if template_data.get("avatar_cache_enabled") else "关闭"
+    trigger_prefix = template_data.get("trigger_prefix") or ""
+    trigger_prefix_display = trigger_prefix if trigger_prefix else "未启用"
 
     lines = [
         "Meme 插件状态",
@@ -69,6 +76,7 @@ def format_plugin_status_text(template_data: dict[str, Any]) -> str:
         f"头像缓存：{avatar_cache_status}",
         "",
         "配置参数：",
+        f"触发前缀：{trigger_prefix_display}",
         f"冷却时间：{template_data.get('cooldown_seconds', 0)}秒",
         f"生成超时：{template_data.get('generation_timeout', 0)}秒",
         f"缓存过期：{template_data.get('cache_expire_hours', 0)}小时",

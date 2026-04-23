@@ -104,7 +104,37 @@ class TemplateManager:
                 return meme
         return None
 
-    async def find_keyword(self, message_str: str) -> Optional[str]:
+    @staticmethod
+    def normalize_trigger_message(
+        message_str: str,
+        trigger_prefix: str = "",
+    ) -> str:
+        """标准化触发消息，可按需移除首个关键词前缀。"""
+        message_str = (message_str or "").strip()
+        if not message_str:
+            return ""
+
+        if not trigger_prefix:
+            return message_str
+
+        words = message_str.split(maxsplit=1)
+        first_word = words[0]
+        if not first_word.startswith(trigger_prefix):
+            return ""
+
+        normalized_first = first_word[len(trigger_prefix):].strip()
+        if not normalized_first:
+            return ""
+
+        if len(words) == 1:
+            return normalized_first
+        return f"{normalized_first} {words[1]}"
+
+    async def find_keyword(
+        self,
+        message_str: str,
+        trigger_prefix: str = "",
+    ) -> Optional[str]:
         """
         从消息中查找匹配的关键词
 
@@ -115,8 +145,9 @@ class TemplateManager:
             匹配的关键词，未找到返回None
         """
         await self._ensure_templates_loaded()
+        normalized_message = self.normalize_trigger_message(message_str, trigger_prefix)
         # 精确匹配：检查关键词是否等于消息字符串的第一个单词
-        words = message_str.split()
+        words = normalized_message.split()
         if not words:
             return None
         return next((k for k in self.meme_keywords if k == words[0]), None)

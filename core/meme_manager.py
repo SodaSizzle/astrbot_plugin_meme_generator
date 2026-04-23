@@ -115,7 +115,10 @@ class MemeManager:
             raise
 
     async def get_resource_block_message(self, message_str: str) -> str | None:
-        keyword = await self.template_manager.find_keyword(message_str)
+        keyword = await self.template_manager.find_keyword(
+            message_str,
+            self.config.trigger_prefix,
+        )
         return self.resource_status.get_block_message(keyword_matched=bool(keyword))
     
     async def generate_template_list(self) -> bytes | None:
@@ -202,7 +205,10 @@ class MemeManager:
             return None
         
         # 查找关键词
-        keyword = await self.template_manager.find_keyword(message_str)
+        keyword = await self.template_manager.find_keyword(
+            message_str,
+            self.config.trigger_prefix,
+        )
         if not keyword:
             return None
 
@@ -219,7 +225,12 @@ class MemeManager:
             return None
         
         # 收集生成参数
-        meme_images, texts, options = await self.param_collector.collect_params(event, keyword, meme)
+        meme_images, texts, options = await self.param_collector.collect_params(
+            event,
+            keyword,
+            meme,
+            keyword_prefix=self.config.trigger_prefix,
+        )
         
         # 生成表情包
         image: bytes = await self.image_generator.generate_image(

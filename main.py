@@ -856,6 +856,7 @@ class MemeConfig:
     def _load_config(self):
         """加载配置"""
         self.enable_plugin: bool = self.config.get("enable_plugin", True)
+        self.trigger_prefix: str = str(self.config.get("trigger_prefix", "") or "")
         self.generation_timeout: int = self.config.get("generation_timeout", 30)
         self.cooldown_seconds: int = self.config.get("cooldown_seconds", 3)
         self.enable_avatar_cache: bool = self.config.get("enable_avatar_cache", True)
@@ -1389,6 +1390,7 @@ class MemeGeneratorPlugin(Star):
         metadata = load_metadata_from_yaml()
         template_data["version"] = metadata.get("version")
         template_data["author"] = metadata.get("author")
+        template_data["trigger_prefix"] = self.meme_config.trigger_prefix
 
         fallback_text = format_help_menu_text(template_data)
 
@@ -1521,6 +1523,7 @@ class MemeGeneratorPlugin(Star):
             "cooldown_seconds": self.meme_config.cooldown_seconds,
             "generation_timeout": self.meme_config.generation_timeout,
             "cache_expire_hours": self.meme_config.cache_expire_hours,
+            "trigger_prefix": self.meme_config.trigger_prefix,
             "disabled_templates_count": len(self.meme_config.disabled_templates),
             "total_templates": total_templates,
             "total_keywords": total_keywords,

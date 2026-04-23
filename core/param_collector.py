@@ -26,7 +26,8 @@ class ParamCollector:
             self,
             event: AstrMessageEvent,
             keyword: str,
-            meme: Meme
+            meme: Meme,
+            keyword_prefix: str = "",
     ) -> Tuple[List[MemeImage], List[str], Dict[str, Union[bool, str, int, float]]]:
         """
         收集表情包生成所需的参数
@@ -65,7 +66,7 @@ class ParamCollector:
             elif isinstance(_seg, Comp.At):
                 await self._process_at_segment(_seg, event, self_id, target_ids, target_names, options, meme_images)
             elif isinstance(_seg, Comp.Plain):
-                self._process_plain_segment(_seg, keyword, texts)
+                self._process_plain_segment(_seg, keyword, texts, keyword_prefix)
 
         reply_seg = next((seg for seg in messages if isinstance(seg, Comp.Reply)), None)
         await self._process_reply_segments(event, reply_seg, _process_segment, meme_images)
@@ -264,11 +265,18 @@ class ParamCollector:
                     target_names.append(nickname)
                     meme_images.append(MemeImage(nickname, at_avatar))
 
-    def _process_plain_segment(self, seg: Comp.Plain, keyword: str, texts: List[str]):
+    def _process_plain_segment(
+            self,
+            seg: Comp.Plain,
+            keyword: str,
+            texts: List[str],
+            keyword_prefix: str = "",
+    ):
         """处理纯文本组件"""
         plains: List[str] = seg.text.strip().split()
+        prefixed_keyword = f"{keyword_prefix}{keyword}" if keyword_prefix else keyword
         for text in plains:
-            if text != keyword:  # 排除关键词本身
+            if text not in {keyword, prefixed_keyword}:  # 排除关键词本身
                 texts.append(text)
 
     async def _auto_fill_images(

@@ -5,6 +5,12 @@
         "hint": "全局控制插件是否响应用户请求，关闭后只有Bot管理员能通过私聊使用开关命令",
         "default": true
     },
+    "trigger_prefix": {
+        "description": "表情触发前缀",
+        "type": "string",
+        "hint": "留空表示直接发送关键词即可触发；填写后，只有带此前缀的表情关键词才会生成。建议不要与 AstrBot 全局唤醒前缀使用相同值，尤其不建议直接使用 /，否则消息可能优先进入 AstrBot 对话流程而不是本插件，例如填写 # 后需使用 #摸头",
+        "default": ""
+    },
     "cooldown_seconds": {
         "description": "用户冷却时间(秒)",
         "type": "int",
