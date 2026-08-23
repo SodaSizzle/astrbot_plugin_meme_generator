@@ -54,8 +54,8 @@ class MemeManager:
             cleanup_interval_hours=config.cache_expire_hours
         )
 
-        # 初始化参数收集器（传入网络工具）
-        self.param_collector = ParamCollector(self.network_utils)
+        # 初始化参数收集器（传入网络工具和配置）
+        self.param_collector = ParamCollector(self.network_utils, self.config)
 
         # 初始化资源检查（固定启用）
         logger.info("🎭 表情包插件正在初始化...")
