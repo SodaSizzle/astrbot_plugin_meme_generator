@@ -871,6 +871,8 @@ class MemeConfig:
         self.auto_meme_max_per_session: int = preset["max_per_session"]
         self.auto_meme_reply_weight: float = preset["reply_weight"]
         self.auto_meme_user_weight: float = preset["user_weight"]
+        self.enable_counter_attack: bool = self.config.get("enable_counter_attack", False)
+        self.counter_attack_users: list[str] = [str(u).strip() for u in self.config.get("counter_attack_users", [])]
 
     def save_config(self):
         """保存配置 - 只写入改动的键，避免循环引用"""

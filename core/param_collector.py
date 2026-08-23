@@ -19,8 +19,9 @@ except Exception:  # pragma: no cover - fallback for older AstrBot versions
 class ParamCollector:
     """参数收集器"""
 
-    def __init__(self, network_utils=None):
+    def __init__(self, network_utils=None, config=None):
         self.network_utils = network_utils
+        self.config = config
 
     async def collect_params(
             self,
@@ -87,6 +88,26 @@ class ParamCollector:
 
         # 智能补全图片参数（优先使用用户头像）
         await self._auto_fill_images(event, send_id, self_id, sender_name, meme_images, max_images)
+
+        # 反弹/反杀机制：当开启且目标包含受保护用户时触发
+        enable_counter = getattr(self.config, "enable_counter_attack", False) if self.config else False
+        counter_users = set(getattr(self.config, "counter_attack_users", [])) if self.config else set()
+        if enable_counter and any(tid in counter_users for tid in target_ids) and send_id not in counter_users:
+            hit_tid = next(tid for tid in target_ids if tid in counter_users)
+            sender_avatar = await self.network_utils.get_avatar(send_id) if self.network_utils else None
+            target_avatar = await self.network_utils.get_avatar(hit_tid) if self.network_utils else None
+            
+            if min_images <= 1 and max_images <= 1:
+                # 单人表情（如 摸头/拍头/打）：目标头像直接替换为攻击者自己
+                if sender_avatar:
+                    meme_images = [MemeImage(sender_name, sender_avatar)]
+            else:
+                # 双人表情（如 亲亲/抱/蹭蹭）：将 [攻击者, 受害者] 角色对调为 [受害者, 攻击者]
+                if target_avatar and sender_avatar:
+                    meme_images = [
+                        MemeImage(options.get("name", "受保护用户"), target_avatar),
+                        MemeImage(sender_name, sender_avatar)
+                    ]
 
         # 智能补全文本参数（使用昵称和默认文本）
         self._auto_fill_texts(texts, target_names, default_texts, min_texts, max_texts)
