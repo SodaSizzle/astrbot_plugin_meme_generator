@@ -8,7 +8,6 @@ from meme_generator.tools import MemeProperties, MemeSortBy, render_meme_list
 from meme_generator.resources import check_resources
 from astrbot.api import logger
 from astrbot.core.platform import AstrMessageEvent
-import astrbot.core.message.components as Comp
 
 from .template_manager import TemplateManager
 from .param_collector import ParamCollector
@@ -304,38 +303,4 @@ class MemeManager:
         # 记录用户使用时间
         self.cooldown_manager.record_user_use(user_id)
 
-        return image
-
-    async def generate_meme_by_template_key(
-        self,
-        event: AstrMessageEvent,
-        template_key: str,
-        text_candidates: list[str] | None = None,
-    ) -> Optional[bytes]:
-        """Generate a meme directly from a selected template key."""
-        meme = await self.template_manager.find_meme(template_key)
-        if not meme:
-            return None
-        if self.config.is_template_disabled(template_key):
-            return None
-
-        meme_images, texts, options = await self.param_collector.collect_auto_params(
-            event=event,
-            meme=meme,
-            text_candidates=text_candidates or [],
-        )
-
-        image: bytes = await self.image_generator.generate_image(
-            meme,
-            meme_images,
-            texts,
-            options,
-            self.config.generation_timeout,
-        )
-        try:
-            compressed = ImageUtils.compress_image(image)
-            if compressed:
-                image = compressed
-        except Exception:
-            pass
         return image

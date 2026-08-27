@@ -1,12 +1,10 @@
 """头像缓存管理模块"""
 
-import os
 import time
 import json
 import hashlib
-import pickle
 from pathlib import Path
-from typing import Dict, Optional, Tuple
+from typing import Dict, Optional
 from astrbot.api import logger
 
 

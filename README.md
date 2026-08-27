@@ -4,7 +4,7 @@
 
 # AstrBot 表情包生成插件
 
-基于 [meme-generator-rs](https://github.com/MemeCrafters/meme-generator-rs) 的 AstrBot 表情包插件。支持关键词触发、模板查询、管理员禁用模板，以及基于本地规则的自动补图。
+基于 [meme-generator-rs](https://github.com/MemeCrafters/meme-generator-rs) 的 AstrBot 表情包插件。支持关键词触发、模板查询和管理员禁用模板。
 
 </div>
 
@@ -15,7 +15,6 @@
 - 提供模板列表、模板详情、资源状态、插件状态等查询命令
 - 支持单模板禁用/启用，方便群聊内容管理
 - 支持头像缓存、触发前缀、自定义冷却时间
-- 支持自动补图，不额外调用 LLM
 
 ## 交流与反馈
 
@@ -166,16 +165,6 @@ fc-cache -fv
 
 - 推荐使用与 AstrBot 全局 `wake_prefix` 不同的前缀，例如 `#`、`.`、`表情`
 - 不推荐将 `trigger_prefix` 设置为 `/`。如果 AstrBot 也使用 `/` 作为唤醒前缀，消息可能会优先进入对话流程
-
-### 自动补图配置
-
-自动补图会在 AstrBot 正常回复后，根据用户消息和机器人回复做本地判断，决定是否额外发送一张表情图。整个流程不额外调用 LLM。
-
-| 配置项 | 类型 | 默认值 | 说明 |
-|---|---|---|---|
-| `enable_auto_meme` | `bool` | `false` | 是否启用自动补图 |
-| `auto_meme_scope` | `string` | `all` | 生效范围：`all` / `group` / `private` |
-| `auto_meme_level` | `string` | `平衡` | 活跃度：`保守` / `平衡` / `活跃` |
 
 ## 扩展额外资源
 
