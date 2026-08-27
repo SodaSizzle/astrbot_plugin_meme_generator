@@ -1,6 +1,8 @@
 import json
+import os
 import random
 import re
+import sys
 import time
 import yaml
 from dataclasses import dataclass
@@ -15,6 +17,20 @@ from astrbot.core.message.message_event_result import MessageChain
 from astrbot.core.platform import AstrMessageEvent
 from astrbot.core.star.filter.event_message_type import EventMessageType
 from astrbot.api.star import StarTools
+
+# meme_generator reads MEME_HOME while its native module is being imported.
+# Bootstrap it before importing any module under core, because those modules
+# import meme_generator at module scope. StarTools supplies AstrBot's
+# cross-platform, plugin-specific data directory. The explicit plugin name is
+# required here because AstrBot has not registered this module's metadata yet.
+PLUGIN_NAME = "astrbot_plugin_meme_generator"
+MEME_HOME = Path(StarTools.get_data_dir(PLUGIN_NAME))
+if "meme_generator" in sys.modules:
+    logger.warning(
+        "meme_generator 已在资源目录初始化前被加载，MEME_HOME 可能无法在本次运行中生效"
+    )
+os.environ["MEME_HOME"] = str(MEME_HOME)
+logger.info("表情包资源目录: %s", MEME_HOME)
 
 from .core.meme_manager import MemeManager
 from .core.meme_manager import ResourceNotReadyError
@@ -1329,9 +1345,8 @@ class MemeGeneratorPlugin(Star):
             self.meme_config.auto_meme_max_per_session,
         )
 
-        # 获取插件数据目录
-
-        data_dir = str(StarTools.get_data_dir())
+        # MEME_HOME 和插件缓存共用 AstrBot 分配的跨平台插件数据目录。
+        data_dir = str(MEME_HOME)
 
         # 初始化核心管理器
         self.meme_manager = MemeManager(self.meme_config, data_dir)

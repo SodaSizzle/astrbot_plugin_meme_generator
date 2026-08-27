@@ -1,10 +1,11 @@
 """表情包管理器模块"""
 
 import asyncio
+import shutil
 from pathlib import Path
 from typing import Optional
 from meme_generator.tools import MemeProperties, MemeSortBy, render_meme_list
-from meme_generator.resources import check_resources_in_background
+from meme_generator.resources import check_resources
 from astrbot.api import logger
 from astrbot.core.platform import AstrMessageEvent
 import astrbot.core.message.components as Comp
@@ -33,11 +34,12 @@ class MemeManager:
         self.image_generator = ImageGenerator()
         self.cooldown_manager = CooldownManager(config.cooldown_seconds)
         self.resource_status = ResourceStatus()
+        self.data_dir = Path(data_dir).resolve() if data_dir else None
 
         # 初始化头像缓存和网络工具
         # 使用传入的数据目录，如果没有则使用默认路径
-        if data_dir:
-            cache_dir = Path(data_dir) / "cache" / "meme_avatars"
+        if self.data_dir:
+            cache_dir = self.data_dir / "cache" / "meme_avatars"
         else:
             cache_dir = Path("data/cache/meme_avatars")  # 默认路径
 
@@ -76,7 +78,12 @@ class MemeManager:
         self.resource_status.mark_started()
         heartbeat_task = asyncio.create_task(self._log_resource_heartbeat())
         try:
-            await asyncio.to_thread(check_resources_in_background)
+            # check_resources_in_background only spawns an internal thread and
+            # returns immediately, which made us report resources as ready while
+            # downloads were still running. Execute the blocking checker in
+            # asyncio's worker thread so completion reflects the real state.
+            await asyncio.to_thread(check_resources)
+            await asyncio.to_thread(self._remove_legacy_resources)
             await self.template_manager.refresh_templates()
             all_memes = await self.template_manager.get_all_memes()
             self.resource_status.mark_ready(len(all_memes))
@@ -98,6 +105,55 @@ class MemeManager:
                 await heartbeat_task
             except (asyncio.CancelledError, Exception):
                 pass
+
+    def _remove_legacy_resources(self) -> None:
+        """Remove resources from the former user-home location after migration."""
+        if self.data_dir is None:
+            return
+
+        new_resources = self.data_dir / "resources"
+        fonts_dir = new_resources / "fonts"
+        images_dir = new_resources / "images"
+
+        # Never remove the old copy until both kinds of resources exist in the
+        # AstrBot plugin data directory. This also protects against failed or
+        # interrupted first-time downloads.
+        if not self._directory_has_files(fonts_dir) or not self._directory_has_files(
+            images_dir
+        ):
+            logger.warning("新资源目录尚不完整，保留旧资源目录")
+            return
+
+        legacy_resources = Path.home() / ".meme_generator" / "resources"
+        try:
+            legacy_resources = legacy_resources.resolve()
+            new_resources = new_resources.resolve()
+        except OSError as e:
+            logger.warning("检查旧资源目录失败，跳过删除: %s", e)
+            return
+
+        if legacy_resources == new_resources or not legacy_resources.is_dir():
+            return
+
+        # The target is constructed from Path.home() and fixed path components;
+        # keep this equality check so future refactors cannot broaden deletion.
+        expected = (Path.home() / ".meme_generator" / "resources").resolve()
+        if legacy_resources != expected:
+            logger.warning("旧资源目录校验失败，跳过删除: %s", legacy_resources)
+            return
+
+        try:
+            shutil.rmtree(legacy_resources)
+            logger.info("已删除旧表情包资源目录: %s", legacy_resources)
+        except OSError as e:
+            logger.warning("删除旧表情包资源目录失败: %s", e)
+
+    @staticmethod
+    def _directory_has_files(directory: Path) -> bool:
+        try:
+            return directory.is_dir() and any(path.is_file() for path in directory.rglob("*"))
+        except OSError:
+            return False
 
     async def _log_resource_heartbeat(self, interval: float = 10.0):
         """资源下载期间，定期把进度打印到日志"""

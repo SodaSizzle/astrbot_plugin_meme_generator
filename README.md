@@ -44,11 +44,20 @@ pip install -r astrbot_plugin_meme_generator/requirements.txt
 
 ### 自动下载
 
-默认会把资源下载到用户目录下：
+默认会把资源下载到 AstrBot 为本插件分配的数据目录中，不依赖操作系统的用户目录。路径由 `StarTools.get_data_dir("astrbot_plugin_meme_generator")` 在运行时确定，例如：
 
-- Windows: `C:\Users\{用户名}\.meme_generator\`
-- Linux: `~/.meme_generator/`
-- Docker: `/root/.meme_generator/`
+```text
+AstrBot/
+└── data/
+    └── plugin_data/
+        └── astrbot_plugin_meme_generator/
+            ├── resources/
+            └── cache/
+```
+
+插件会在首次导入 `meme_generator` 前，将该目录设置为 `MEME_HOME`，因此 Windows、Linux 和 Docker 使用同一套相对目录规则，无需写死绝对路径。
+
+当新目录中的字体和图片资源均准备完成后，插件会自动删除用户主目录下旧的 `.meme_generator/resources/`。旧目录中的 `config.toml`、`libraries/` 等其他内容不会被删除。
 
 ### 手动下载
 
@@ -56,33 +65,13 @@ pip install -r astrbot_plugin_meme_generator/requirements.txt
 
 - 下载地址: <https://github.com/SodaSizzle/astrbot_plugin_meme_generator/releases>
 
-Windows:
-
-```bash
-# 1. 下载 resources.zip
-# 2. 解压到 C:\Users\{你的用户名}\.meme_generator\
-```
-
-Linux:
-
-```bash
-# 1. 下载 resources.tar.gz
-# 2. 解压到 ~/.meme_generator/
-tar -zxvf resources.tar.gz -C ~/.meme_generator/
-```
-
-Docker:
-
-```bash
-docker cp resources.tar.gz astrbot:/root/.meme_generator/
-docker exec -it astrbot tar -zxvf /root/.meme_generator/resources.tar.gz -C /
-docker restart astrbot
-```
+下载后，将压缩包中的 `resources/` 目录完整解压到本插件的数据目录。不要再放到用户主目录下的 `.meme_generator/`。
 
 ### 资源目录示例
 
 ```text
-.meme_generator/
+astrbot_plugin_meme_generator/
+├── cache/
 └── resources/
     ├── fonts/
     └── images/
