@@ -2,6 +2,6 @@ name: astrbot_plugin_meme_generator
 display_name: 表情包生成插件
 desc: "AstrBot 表情包生成插件，支持关键词触发、模板查询、冷却控制与禁用管理"
 help: 使用关键词触发表情包生成。命令：表情帮助、表情列表、表情信息 [关键词]、单表情禁用 [模板名]、单表情启用 [模板名]、禁用列表
-version: v2.2.0
+version: v2.3.0
 author: SodaSizzle
 repo: https://github.com/SodaSizzle/astrbot_plugin_meme_generator
