@@ -22,12 +22,18 @@ class NetworkUtils:
         Returns:
             图片字节数据，失败返回None
         """
-        url = url.replace("https://", "http://")
+        if not url.startswith(("https://", "http://")):
+            logger.warning("拒绝不受支持的图片 URL: %s", url)
+            return None
+
         try:
             async with aiohttp.ClientSession() as client:
-                response = await client.get(url)
-                img_bytes = await response.read()
-                return img_bytes
+                async with client.get(url, timeout=10) as response:
+                    response.raise_for_status()
+                    if url.startswith("https://") and response.url.scheme != "https":
+                        logger.warning("拒绝 HTTPS 图片重定向到非安全协议: %s", response.url)
+                        return None
+                    return await response.read()
         except Exception as e:
             logger.error(f"图片下载失败: {e}")
             return None
