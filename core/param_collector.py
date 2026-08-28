@@ -1,6 +1,7 @@
 """参数收集模块"""
 
 import base64
+import re
 from pathlib import Path
 from typing import Awaitable, Callable, Dict, List, Tuple, Union
 from meme_generator import Meme
@@ -45,7 +46,6 @@ class ParamCollector:
         options: Dict[str, Union[bool, str, int, float]] = {}
 
         params = meme.info.params
-        min_images: int = params.min_images  # noqa: F841
         max_images: int = params.max_images
         min_texts: int = params.min_texts
         max_texts: int = params.max_texts
@@ -66,7 +66,19 @@ class ParamCollector:
             elif isinstance(_seg, Comp.At):
                 await self._process_at_segment(_seg, event, self_id, target_ids, target_names, options, meme_images)
             elif isinstance(_seg, Comp.Plain):
-                self._process_plain_segment(_seg, keyword, texts, keyword_prefix)
+                await self._process_plain_segment(
+                    _seg,
+                    keyword,
+                    texts,
+                    event,
+                    self_id,
+                    target_ids,
+                    target_names,
+                    options,
+                    meme_images,
+                    max_images,
+                    keyword_prefix,
+                )
 
         reply_seg = next((seg for seg in messages if isinstance(seg, Comp.Reply)), None)
         await self._process_reply_segments(event, reply_seg, _process_segment, meme_images)
@@ -86,7 +98,7 @@ class ParamCollector:
             target_names.append(sender_name)
 
         # 智能补全图片参数（优先使用用户头像）
-        await self._auto_fill_images(event, send_id, self_id, sender_name, meme_images, max_images)
+        await self._auto_fill_images(send_id, self_id, sender_name, meme_images, max_images)
 
         # 智能补全文本参数（使用昵称和默认文本）
         self._auto_fill_texts(texts, target_names, default_texts, min_texts, max_texts)
@@ -185,33 +197,88 @@ class ParamCollector:
     ):
         """处理@组件"""
         seg_qq = str(seg.qq)
-        if seg_qq != self_id:
-            target_ids.append(seg_qq)
-            if self.network_utils and (at_avatar := await self.network_utils.get_avatar(seg_qq)):
-                # 获取被@用户的详细信息
-                if result := await PlatformUtils.get_user_extra_info(event, seg_qq):
-                    nickname, sex = result
-                    options["name"], options["gender"] = nickname, sex
-                    target_names.append(nickname)
-                    meme_images.append(MemeImage(nickname, at_avatar))
+        await self._process_qq_target(
+            seg_qq,
+            event,
+            self_id,
+            target_ids,
+            target_names,
+            options,
+            meme_images,
+            ignore_self=True,
+        )
 
-    def _process_plain_segment(
+    async def _process_plain_segment(
             self,
             seg: Comp.Plain,
             keyword: str,
             texts: List[str],
+            event: AstrMessageEvent,
+            self_id: str,
+            target_ids: List[str],
+            target_names: List[str],
+            options: Dict[str, Union[bool, str, int, float]],
+            meme_images: List[MemeImage],
+            max_images: int,
             keyword_prefix: str = "",
     ):
-        """处理纯文本组件"""
+        """处理纯文本组件，并把独立的 QQ 号解析为头像目标。"""
         plains: List[str] = seg.text.strip().split()
         prefixed_keyword = f"{keyword_prefix}{keyword}" if keyword_prefix else keyword
         for text in plains:
-            if text not in {keyword, prefixed_keyword}:  # 排除关键词本身
-                texts.append(text)
+            if text in {keyword, prefixed_keyword}:
+                continue
+            if (
+                len(meme_images) < max_images
+                and self._is_qq_number(text)
+                and text not in target_ids
+            ):
+                await self._process_qq_target(
+                    text,
+                    event,
+                    self_id,
+                    target_ids,
+                    target_names,
+                    options,
+                    meme_images,
+                )
+                continue
+            texts.append(text)
+
+    @staticmethod
+    def _is_qq_number(text: str) -> bool:
+        """QQ 号为 5 至 12 位、首位非零的 ASCII 数字。"""
+        return re.fullmatch(r"[1-9][0-9]{4,11}", text) is not None
+
+    async def _process_qq_target(
+            self,
+            qq: str,
+            event: AstrMessageEvent,
+            self_id: str,
+            target_ids: List[str],
+            target_names: List[str],
+            options: Dict[str, Union[bool, str, int, float]],
+            meme_images: List[MemeImage],
+            ignore_self: bool = False,
+    ) -> None:
+        """获取 QQ 用户资料和头像；同时供 @ 与纯 QQ 号复用。"""
+        # @机器人通常只是平台的唤醒方式，不应作为素材；但用户显式填写
+        # 机器人的 QQ 号时，表达的是明确的头像选择，必须允许使用。
+        if (ignore_self and qq == self_id) or qq in target_ids:
+            return
+
+        target_ids.append(qq)
+        nickname = qq
+        if result := await PlatformUtils.get_user_extra_info(event, qq):
+            nickname, sex = result
+            options["name"], options["gender"] = nickname, sex
+        target_names.append(nickname)
+
+        if self.network_utils and (avatar := await self.network_utils.get_avatar(qq)):
+            meme_images.append(MemeImage(nickname, avatar))
 
     async def _auto_fill_images(
             self,
-            event: AstrMessageEvent,
             send_id: str,
             self_id: str,
             sender_name: str,

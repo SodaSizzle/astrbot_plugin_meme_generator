@@ -1,6 +1,5 @@
 """网络请求工具模块"""
 
-import random
 import aiohttp
 from typing import Optional
 from astrbot.api import logger
@@ -43,15 +42,17 @@ class NetworkUtils:
         Returns:
             头像字节数据，失败返回None
         """
-        # 先尝试从缓存获取
+        # QQ 头像接口只接受数字 QQ 号。其他平台的用户 ID 不应随机
+        # 映射到陌生 QQ 用户，否则同一用户每次可能得到不同头像。
+        if not user_id.isascii() or not user_id.isdigit():
+            logger.debug("跳过非 QQ 用户 ID 的头像下载: %s", user_id)
+            return None
+
+        # 只读取有效 QQ 号对应的缓存，避免沿用历史异常缓存。
         if self.avatar_cache:
             cached_avatar = self.avatar_cache.get_avatar(user_id)
             if cached_avatar:
                 return cached_avatar
-
-        # 如果user_id不是数字，生成随机数字ID
-        if not user_id.isdigit():
-            user_id = "".join(random.choices("0123456789", k=9))
 
         avatar_url = f"https://q4.qlogo.cn/headimg_dl?dst_uin={user_id}&spec=640"
         try:
