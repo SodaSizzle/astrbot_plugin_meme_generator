@@ -4,7 +4,6 @@ import asyncio
 import shutil
 from pathlib import Path
 from typing import Optional
-from meme_generator.tools import MemeProperties, MemeSortBy, render_meme_list
 from meme_generator.resources import check_resources
 from astrbot.api import logger
 from astrbot.core.platform import AstrMessageEvent
@@ -176,32 +175,6 @@ class MemeManager:
         )
         return self.resource_status.get_block_message(keyword_matched=bool(keyword))
     
-    async def generate_template_list(self) -> bytes | None:
-        """
-        生成表情包模板列表图片
-        
-        Returns:
-            模板列表图片字节数据，失败返回None
-        """
-        sort_by = MemeSortBy.KeywordsPinyin
-
-        meme_properties: dict[str, MemeProperties] = {}
-        all_memes = await self.template_manager.get_all_memes()
-        for meme in all_memes:
-            properties = MemeProperties(disabled=False, hot=False, new=False)
-            meme_properties[meme.key] = properties
-
-        output: bytes | None = await asyncio.to_thread(
-            render_meme_list,  # type: ignore
-            meme_properties=meme_properties,
-            exclude_memes=[],
-            sort_by=sort_by,
-            sort_reverse=False,
-            text_template="{index}. {keywords}",
-            add_category_icon=True,
-        )
-        return output
-    
     async def get_template_info(self, keyword: str) -> Optional[dict]:
         """
         获取模板详细信息
@@ -232,9 +205,6 @@ class MemeManager:
             "default_texts": params.default_texts,
             "tags": list(info.tags),
         }
-
-        # 不再生成预览图
-        template_info["preview"] = None
 
         return template_info
     

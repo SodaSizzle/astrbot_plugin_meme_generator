@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Lab · 模板目录</title><link rel="stylesheet" href="../css/meme_ui.css">
+</head>
+<body><main class="canvas list-canvas">
+    <header class="masthead list-head">
+        <div class="brand-mark" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M13 14h16v16H13zm22 0h16v16H35zM13 36h16v16H13zm22 0h16v16H35z"/></svg></div>
+        <div class="mast-copy"><div class="kicker">TEMPLATE / CONTACT SHEET</div><h1>表情模板目录</h1><p>发送任意关键词即可开始制作。</p></div>
+        <div class="edition"><span>PAGE</span><strong>{{ current_page }} / {{ total_pages }}</strong><small>{{ total_templates }} TEMPLATES</small></div>
+    </header>
+    <section class="catalog-summary">
+        <div><strong>{{ total_templates }}</strong><span>模板</span></div><div><strong>{{ total_keywords }}</strong><span>关键词</span></div><div><strong>{{ disabled_templates_count }}</strong><span>已禁用</span></div>
+        <p><b>使用方式</b> 发送卡片中的任意关键词；灰色卡片表示当前不可用。</p>
+    </section>
+    <div class="page-marker"><span>PAGE {{ current_page }} / {{ total_pages }}</span><p>使用“/表情列表 页码”查看更多模板</p></div>
+    <section class="catalog-grid" aria-label="表情模板列表">
+        {% for item in templates %}<article class="template-card {{ 'disabled' if item.disabled else '' }}">
+            <div class="template-meta"><span>{{ '%03d' % item.index }}</span><em>{{ 'OFF' if item.disabled else 'READY' }}</em></div><h2>{{ item.display_name }}</h2><p>{{ item.aliases if item.aliases else '无其他别名' }}</p>{% if item.keyword_count > 5 %}<small>另有 {{ item.keyword_count - 5 }} 个关键词</small>{% endif %}
+        </article>{% endfor %}
+    </section>
+    <footer class="footer-note"><span>INDEX</span><p>模板资源由 meme_generator 提供，目录视觉由本插件渲染。</p><strong>astrbot_plugin_meme_generator</strong></footer>
+</main></body></html>

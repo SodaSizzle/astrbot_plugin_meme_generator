@@ -51,7 +51,7 @@ def format_help_menu_text(template_data: dict[str, Any]) -> str:
                 if not trigger_prefix
                 else f"1. 当前需携带触发前缀“{trigger_prefix}”生成，例如“{trigger_prefix}加载中”。"
             ),
-            "2. 支持 @用户 自动获取头像，也可以上传图片作为输入。",
+            "2. 支持 @用户 或直接填写 QQ 号自动获取头像，也可以上传图片作为输入。",
             "3. 引用他人消息时，可直接沿用对方头像与昵称信息。",
             "4. 帮助、列表、信息和管理命令不受表情触发前缀影响。",
         ]
@@ -86,6 +86,32 @@ def format_plugin_status_text(template_data: dict[str, Any]) -> str:
         f"可用模板：{template_data.get('total_templates', 0)}",
         f"关键词数：{template_data.get('total_keywords', 0)}",
     ]
+    return "\n".join(lines)
+
+
+def format_template_list_text(template_data: dict[str, Any]) -> str:
+    templates = template_data.get("templates")
+    if not isinstance(templates, list) or not templates:
+        return "表情模板库\n暂无可用模板"
+
+    lines = [
+        "表情模板库",
+        (
+            f"模板 {template_data.get('total_templates', 0)} 个 | "
+            f"关键词 {template_data.get('total_keywords', 0)} 个 | "
+            f"第 {template_data.get('current_page', 1)}/{template_data.get('total_pages', 1)} 页"
+        ),
+        "",
+    ]
+    for item in templates:
+        if not isinstance(item, dict):
+            continue
+        state = " [已禁用]" if item.get("disabled") else ""
+        aliases = item.get("aliases")
+        alias_text = f"（{aliases}）" if aliases else ""
+        lines.append(
+            f"{item.get('index')}. {item.get('display_name')}{alias_text}{state}"
+        )
     return "\n".join(lines)
 
 

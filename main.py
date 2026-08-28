@@ -32,6 +32,7 @@ from .utils.permission_utils import PermissionUtils
 from .utils.render_fallback import (
     format_help_menu_text,
     format_plugin_status_text,
+    format_template_list_text,
     render_with_fallback,
 )
 
@@ -52,8 +53,7 @@ def _load_static_template(template_name: str) -> str | None:
         return None
 
     css_map = {
-        "../css/meme_help.css": STATIC_DIR / "css" / "meme_help.css",
-        "../css/meme_info.css": STATIC_DIR / "css" / "meme_info.css",
+        "../css/meme_ui.css": STATIC_DIR / "css" / "meme_ui.css",
     }
     for relative_path, css_path in css_map.items():
         if relative_path not in content or not css_path.exists():
@@ -82,25 +82,9 @@ def _load_static_data(data_file_name: str) -> dict[str, object] | None:
 class MemeConfig:
     """表情包生成器配置管理类"""
 
-    DEPRECATED_KEYS = (
-        "enable_auto_meme",
-        "auto_meme_scope",
-        "auto_meme_level",
-    )
-
     def __init__(self, config: AstrBotConfig):
         self.config = config
-        self._remove_deprecated_config()
         self._load_config()
-
-    def _remove_deprecated_config(self) -> None:
-        removed = [key for key in self.DEPRECATED_KEYS if key in self.config]
-        if not removed:
-            return
-        for key in removed:
-            self.config.pop(key, None)
-        self.config.save_config()
-        logger.info("已清理废弃配置项: %s", ", ".join(removed))
 
     def _load_config(self):
         """加载配置"""
@@ -111,12 +95,6 @@ class MemeConfig:
         self.enable_avatar_cache: bool = self.config.get("enable_avatar_cache", True)
         self.cache_expire_hours: int = self.config.get("cache_expire_hours", 24)
         self.disabled_templates: list[str] = self.config.get("disabled_templates", [])
-
-    def save_config(self):
-        """保存配置 - 只写入改动的键，避免循环引用"""
-        self.config["disabled_templates"] = self.disabled_templates
-        self.config["enable_plugin"] = self.enable_plugin
-        self.config.save_config()
 
     def _save_specific_config(self, key: str, value):
         """保存特定配置项的专用方法"""
@@ -167,13 +145,6 @@ class TemplateHandlers:
     def __init__(self, meme_manager: MemeManager, config: MemeConfig):
         self.meme_manager = meme_manager
         self.config = config
-
-    async def handle_template_list(self, event: AstrMessageEvent):
-        output = await self.meme_manager.generate_template_list()
-        if output:
-            yield event.chain_result([Comp.Image.fromBytes(output)])
-        else:
-            yield event.plain_result("表情包列表生成失败")
 
     async def handle_template_info(
         self,
@@ -378,6 +349,8 @@ _metadata = load_metadata_from_yaml()
     _metadata.get("repo"),
 )
 class MemeGeneratorPlugin(Star):
+    TEMPLATE_PAGE_SIZE = 48
+
     def __init__(self, context: Context, config: AstrBotConfig):
         super().__init__(context)
 
@@ -413,6 +386,25 @@ class MemeGeneratorPlugin(Star):
         except (AttributeError, RuntimeError) as e:
             logger.error(f"清理缓存管理器时出错: {e}")
 
+    async def _render_menu_result(
+            self,
+            event: AstrMessageEvent,
+            template_name: str,
+            template_data: dict[str, object],
+            fallback_text: str,
+    ):
+        """渲染本地菜单；浏览器不可用时保留可操作的纯文本结果。"""
+        template = _load_static_template(template_name)
+
+        async def _render() -> str:
+            return await self.html_render(template, template_data)
+
+        mode, payload = await render_with_fallback(_render, fallback_text)
+        if mode == "image":
+            return event.image_result(payload)
+        logger.warning("%s 渲染失败，已回退到纯文本输出", template_name)
+        return event.plain_result(payload)
+
     @filter.command("表情帮助", alias={"meme帮助", "meme菜单"})
     async def meme_help_menu(self, event: AstrMessageEvent):
         """查看meme插件帮助菜单"""
@@ -421,8 +413,6 @@ class MemeGeneratorPlugin(Star):
             if PermissionUtils.is_bot_admin(event):
                 yield event.plain_result(PermissionUtils.get_plugin_disabled_message())
             return
-
-        meme_help_tmpl = _load_static_template("meme_help.html")
 
         template_data = _load_static_data("meme_help.json")
 
@@ -436,26 +426,21 @@ class MemeGeneratorPlugin(Star):
         if not PermissionUtils.is_bot_admin(event):
             template_data["admin_commands"] = []
 
-        # 从metadata.yaml加载版本和作者信息
-        metadata = load_metadata_from_yaml()
-        template_data["version"] = metadata.get("version")
-        template_data["author"] = metadata.get("author")
+        template_data["version"] = _metadata.get("version")
+        template_data["author"] = _metadata.get("author")
         template_data["trigger_prefix"] = self.meme_config.trigger_prefix
 
         fallback_text = format_help_menu_text(template_data)
-
-        async def _render_help_menu() -> str:
-            return await self.html_render(meme_help_tmpl, template_data)
-
-        mode, payload = await render_with_fallback(_render_help_menu, fallback_text)
-        if mode == "image":
-            yield event.image_result(payload)
-        else:
-            logger.warning("表情帮助菜单渲染失败，已回退到纯文本输出。")
-            yield event.plain_result(payload)
+        yield await self._render_menu_result(
+            event, "meme_help.html", template_data, fallback_text
+        )
 
     @filter.command("表情列表", alias={"meme列表"})
-    async def template_list(self, event: AstrMessageEvent):
+    async def template_list(
+            self,
+            event: AstrMessageEvent,
+            page: int | None = 1,
+    ):
         """查看所有可用的表情包模板"""
         # 检查插件是否启用
         if not self.meme_config.is_plugin_enabled():
@@ -463,8 +448,52 @@ class MemeGeneratorPlugin(Star):
                 yield event.plain_result(PermissionUtils.get_plugin_disabled_message())
             return
 
-        async for result in self.template_handlers.handle_template_list(event):
-            yield result
+        memes = await self.meme_manager.template_manager.get_all_memes()
+        disabled = set(self.meme_config.disabled_templates)
+        all_templates = []
+        for index, meme in enumerate(memes, 1):
+            keywords = list(meme.info.keywords)
+            display_name = keywords[0] if keywords else meme.key
+            aliases = keywords[1:5]
+            all_templates.append({
+                "index": index,
+                "key": meme.key,
+                "display_name": display_name,
+                "aliases": " · ".join(aliases),
+                "keyword_count": len(keywords),
+                "disabled": meme.key in disabled or bool(disabled.intersection(keywords)),
+            })
+
+        total_pages = max(
+            1,
+            (len(all_templates) + self.TEMPLATE_PAGE_SIZE - 1)
+            // self.TEMPLATE_PAGE_SIZE,
+        )
+        try:
+            current_page = int(page or 1)
+        except (TypeError, ValueError):
+            yield event.plain_result(f"页码无效，请输入 1-{total_pages} 之间的数字")
+            return
+        if not 1 <= current_page <= total_pages:
+            yield event.plain_result(f"页码超出范围，当前共 {total_pages} 页")
+            return
+
+        start = (current_page - 1) * self.TEMPLATE_PAGE_SIZE
+        templates = all_templates[start:start + self.TEMPLATE_PAGE_SIZE]
+
+        template_data: dict[str, object] = {
+            "templates": templates,
+            "total_templates": len(all_templates),
+            "total_keywords": sum(item["keyword_count"] for item in all_templates),
+            "disabled_templates_count": sum(item["disabled"] for item in all_templates),
+            "current_page": current_page,
+            "total_pages": total_pages,
+            "version": _metadata.get("version"),
+        }
+        fallback_text = format_template_list_text(template_data)
+        yield await self._render_menu_result(
+            event, "meme_list.html", template_data, fallback_text
+        )
 
     @filter.command("表情信息", alias={"meme信息"})
     async def template_info(
@@ -560,12 +589,6 @@ class MemeGeneratorPlugin(Star):
         except Exception:
             pass
 
-        # 尝试加载外部模板
-        template_content = _load_static_template("meme_info.html")
-
-        # 从metadata.yaml加载版本和作者信息
-        metadata = load_metadata_from_yaml()
-
         # 准备模板数据
         template_data = {
             "plugin_enabled": self.meme_config.is_plugin_enabled(),
@@ -577,21 +600,14 @@ class MemeGeneratorPlugin(Star):
             "disabled_templates_count": len(self.meme_config.disabled_templates),
             "total_templates": total_templates,
             "total_keywords": total_keywords,
-            "version": metadata.get("version", "v1.1.0"),
-            "author": metadata.get("author", "SodaSizzle")
+            "version": _metadata.get("version", "unknown"),
+            "author": _metadata.get("author", "unknown")
         }
 
         fallback_text = format_plugin_status_text(template_data)
-
-        async def _render_plugin_info() -> str:
-            return await self.html_render(template_content, template_data)
-
-        mode, payload = await render_with_fallback(_render_plugin_info, fallback_text)
-        if mode == "image":
-            yield event.image_result(payload)
-        else:
-            logger.warning("表情状态页面渲染失败，已回退到纯文本输出。")
-            yield event.plain_result(payload)
+        yield await self._render_menu_result(
+            event, "meme_info.html", template_data, fallback_text
+        )
 
     @filter.event_message_type(EventMessageType.ALL)
     async def generate_meme(self, event: AstrMessageEvent):

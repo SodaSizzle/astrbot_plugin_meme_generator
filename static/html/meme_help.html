@@ -1,96 +1,30 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meme 表情包插件 - 帮助菜单</title>
-    <link rel="stylesheet" href="../css/meme_help.css">
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Lab · 使用手册</title><link rel="stylesheet" href="../css/meme_ui.css">
 </head>
-<body>
-    <div class="page-shell">
-        <div class="container">
-            <div class="header">
-                <div class="eyebrow">Command Center</div>
-                <h1>Meme 表情菜单</h1>
-                <div class="subtitle">清晰查看命令、快速生成表情、轻松管理插件状态。</div>
-                <div class="created-by">astrbot_plugin_meme_generator {{ version }} · by {{ author }}</div>
-                <div class="header-stats">
-                    <div class="stat-pill">
-                        <span class="stat-value">{{ basic_commands|length }}</span>
-                        <span class="stat-label">基础命令</span>
-                    </div>
-                    {% if admin_commands %}
-                    <div class="stat-pill">
-                        <span class="stat-value">{{ admin_commands|length }}</span>
-                        <span class="stat-label">管理命令</span>
-                    </div>
-                    {% endif %}
-                    <div class="stat-pill">
-                        <span class="stat-value">3</span>
-                        <span class="stat-label">常用方式</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="content">
-                <div class="section">
-                    <div class="section-heading">
-                        <h2 class="section-title">基础命令</h2>
-                        <div class="section-note">面向所有用户的常用入口</div>
-                    </div>
-                    <div class="command-grid">
-                        {% for cmd in basic_commands %}
-                        <div class="command-card">
-                            <div class="command-meta">
-                                <span class="command-index">0{{ loop.index }}</span>
-                                <span class="command-kind">基础</span>
-                            </div>
-                            <div class="command-name">{{ cmd.name }}</div>
-                            <div class="command-desc">{{ cmd.desc }}</div>
-                        </div>
-                        {% endfor %}
-                    </div>
-                </div>
-
-                {% if admin_commands %}
-                <div class="section admin-section">
-                    <div class="section-heading">
-                        <h2 class="section-title">管理员命令</h2>
-                        <div class="section-note">用于开关、限制与状态检查</div>
-                    </div>
-                    <div class="command-grid">
-                        {% for cmd in admin_commands %}
-                        <div class="command-card">
-                            <div class="command-meta">
-                                <span class="command-index">0{{ loop.index }}</span>
-                                <span class="command-kind">管理</span>
-                            </div>
-                            <div class="command-name">{{ cmd.name }}</div>
-                            <div class="command-desc">{{ cmd.desc }}</div>
-                        </div>
-                        {% endfor %}
-                    </div>
-                </div>
-                {% endif %}
-
-                <div class="usage-tips">
-                    <div class="tips-header">
-                        <h3>使用建议</h3>
-                        <div class="tips-note">上手最快的三种使用路径</div>
-                    </div>
-                    <ul>
-                        {% if trigger_prefix %}
-                        <li>当前需携带触发前缀“{{ trigger_prefix }}”生成，例如“{{ trigger_prefix }}加载中”。</li>
-                        {% else %}
-                        <li>直接发送表情包关键词即可生成，例如“加载中”或“挠头”。</li>
-                        {% endif %}
-                        <li>支持 @用户 自动获取头像，也可以上传图片作为输入。</li>
-                        <li>引用他人消息时，可直接沿用对方头像与昵称信息。</li>
-                        <li>帮助、列表、信息和管理命令不受表情触发前缀影响。</li>
-                    </ul>
-                </div>
-            </div>
+<body><main class="canvas">
+    <header class="masthead">
+        <div class="brand-mark" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M15 14h34v27H31L18 52V41h-3z"/><path d="M24 25h16M24 32h10"/></svg></div>
+        <div class="mast-copy"><div class="kicker">ASTRBOT / MEME LAB</div><h1>表情制作手册</h1><p>找命令、选素材、生成。三步就够。</p></div>
+        <div class="edition"><span>EDITION</span><strong>{{ version }}</strong><small>BY {{ author }}</small></div>
+    </header>
+    <section class="quick-start" aria-labelledby="quick-title">
+        <div class="section-label"><span>01</span><div><h2 id="quick-title">最快上手</h2><p>一条消息完成表情生成</p></div></div>
+        <div class="syntax-strip"><span class="syntax-prefix">输入</span><code>{{ trigger_prefix if trigger_prefix else '' }}摸头</code><span class="syntax-plus">+</span><code class="optional">@用户 / QQ号 / 图片</code></div>
+        <div class="tip-grid">
+            <div><b>A</b><span>{{ '当前必须带前缀“' ~ trigger_prefix ~ '”' if trigger_prefix else '直接发送关键词即可触发' }}</span></div>
+            <div><b>B</b><span>引用消息可沿用图片素材</span></div><div><b>C</b><span>QQ 号需作为独立参数填写</span></div>
         </div>
-    </div>
-</body>
-</html>
+    </section>
+    <section class="manual-section" aria-labelledby="basic-title">
+        <div class="section-label compact"><span>02</span><div><h2 id="basic-title">常用命令</h2><p>{{ basic_commands|length }} 个公开入口</p></div></div>
+        <div class="command-list">{% for cmd in basic_commands %}<article class="command-row"><span class="row-number">{{ '%02d' % loop.index }}</span><code>{{ cmd.name }}</code><p>{{ cmd.desc }}</p></article>{% endfor %}</div>
+    </section>
+    {% if admin_commands %}<section class="manual-section admin" aria-labelledby="admin-title">
+        <div class="section-label compact"><span>03</span><div><h2 id="admin-title">管理控制台</h2><p>仅 Bot 管理员可用</p></div></div>
+        <div class="command-list two-column">{% for cmd in admin_commands %}<article class="command-row"><span class="row-number">A{{ loop.index }}</span><code>{{ cmd.name }}</code><p>{{ cmd.desc }}</p></article>{% endfor %}</div>
+    </section>{% endif %}
+    <footer class="footer-note"><span>TIP</span><p>帮助、列表、信息与管理命令不受表情触发前缀影响。</p><strong>astrbot_plugin_meme_generator</strong></footer>
+</main></body></html>

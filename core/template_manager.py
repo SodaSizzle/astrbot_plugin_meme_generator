@@ -12,7 +12,6 @@ class TemplateManager:
     def __init__(self):
         self._memes: Optional[List[Meme]] = None
         self._meme_keywords: Optional[List[str]] = None
-        self._loading = False
         self._load_lock = asyncio.Lock()
 
         # 尝试立即加载，但不阻塞初始化
@@ -43,12 +42,6 @@ class TemplateManager:
             if self._memes is not None:
                 return
 
-            if self._loading:
-                # 如果正在加载，等待一段时间后重试
-                await asyncio.sleep(0.1)
-                return
-
-            self._loading = True
             try:
                 # 使用 asyncio.to_thread 在线程池中执行同步操作
                 memes = await asyncio.to_thread(get_memes)
@@ -68,8 +61,6 @@ class TemplateManager:
                 # 设置空列表避免重复加载
                 self._memes = []
                 self._meme_keywords = []
-            finally:
-                self._loading = False
 
     async def refresh_templates(self):
         """手动刷新模板列表（用于资源检查完成后调用）"""
@@ -77,16 +68,6 @@ class TemplateManager:
             self._memes = None
             self._meme_keywords = None
         await self._ensure_templates_loaded()
-
-    @property
-    def memes(self) -> List[Meme]:
-        """获取模板列表（同步属性，用于向后兼容）"""
-        return self._memes or []
-
-    @property
-    def meme_keywords(self) -> List[str]:
-        """获取关键词列表（同步属性，用于向后兼容）"""
-        return self._meme_keywords or []
 
     async def find_meme(self, keyword: str) -> Optional[Meme]:
         """
@@ -99,7 +80,7 @@ class TemplateManager:
             找到的表情包模板，未找到返回None
         """
         await self._ensure_templates_loaded()
-        for meme in self.memes:
+        for meme in self._memes or []:
             if keyword == meme.key or any(k == keyword for k in meme.info.keywords):
                 return meme
         return None
@@ -150,19 +131,19 @@ class TemplateManager:
         words = normalized_message.split()
         if not words:
             return None
-        return next((k for k in self.meme_keywords if k == words[0]), None)
+        return next((k for k in self._meme_keywords or [] if k == words[0]), None)
 
     async def get_all_keywords(self) -> List[str]:
         """获取所有关键词"""
         await self._ensure_templates_loaded()
-        return self.meme_keywords.copy()
+        return (self._meme_keywords or []).copy()
 
     async def get_all_memes(self) -> List[Meme]:
         """获取所有表情包模板"""
         await self._ensure_templates_loaded()
-        return self.memes.copy()
+        return (self._memes or []).copy()
 
     async def keyword_exists(self, keyword: str) -> bool:
         """检查关键词是否存在"""
         await self._ensure_templates_loaded()
-        return keyword in self.meme_keywords
+        return keyword in (self._meme_keywords or [])
